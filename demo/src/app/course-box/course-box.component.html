@@ -1,5 +1,5 @@
 <div *ngFor="let course of courses" class="col-md-3 col-sm-6 course">
-  <a class="course-box center-block" href="#">
+  <a class="course-box center-block" [routerLink]="['/main/courses', course.id]">
     <div class="course-img">
       <img alt="{{ course.title}}" src="{{ course.img }}">
     </div>

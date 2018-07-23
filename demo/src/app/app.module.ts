@@ -25,12 +25,19 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { UserCenterFollowComponent } from './user-center-follow/user-center-follow.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { CourseInfoboxComponent } from './course-infobox/course-infobox.component';
+import { CourseContentComponent } from './course-content/course-content.component';
+import { CoursePathComponent } from './course-path/course-path.component';
+import { CourseChapterComponent } from './course-chapter/course-chapter.component';
+import { CommentComponent } from './comment/comment.component';
+import { CourseTeacherComponent } from './course-teacher/course-teacher.component';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
   {path: 'main', component: MainComponent, children:[
       {path: '', component: HomeComponent},
       {path: 'courses', component: CoursesComponent},
+      {path: 'courses/:id', component: CourseContentComponent}
   ]},
   {path: 'user', component: UserComponent, children:[
       {path: '', redirectTo: '/user/center', pathMatch: 'full'},
@@ -72,7 +79,13 @@ const routeConfig: Routes = [
     UserProfileComponent,
     UserAccountComponent,
     UserCenterFollowComponent,
-    PaginationComponent
+    PaginationComponent,
+    CourseInfoboxComponent,
+    CourseContentComponent,
+    CoursePathComponent,
+    CourseChapterComponent,
+    CommentComponent,
+    CourseTeacherComponent
   ],
   imports: [
     BrowserModule,
