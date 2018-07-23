@@ -1,0 +1,19 @@
+<div *ngFor="let course of courses" class="col-md-3 col-sm-6 course">
+  <a class="course-box center-block" href="#">
+    <div class="course-img">
+      <img alt="{{ course.title}}" src="{{ course.img }}">
+    </div>
+    <div class="course-body">
+      <div class="course-name">{{ course.title }}</div>
+      <div class="course-desc">
+        {{ course.desc }}
+      </div>
+      <div class="course-footer">
+        <span class="course-per-num pull-left">
+          <i class="fa fa-users"></i> {{ course.per_num }}
+        </span>
+        <span class="course-free pull-right">免费</span>
+      </div>
+    </div>
+  </a>
+</div>

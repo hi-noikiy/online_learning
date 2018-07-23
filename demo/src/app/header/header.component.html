@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default navbar-fixed-top home-header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+      data-target="#header-navbar-collaspse" aria-expanded="false">
+        <span class="sr-only">在线学习</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" [routerLink]="['/user']">
+       在线学习
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="header-navbar-collaspse">
+      <ul class="nav navbar-nav header-navbar">
+        <li><a [routerLink]="['/main']">首页</a></li>
+        <li><a [routerLink]="['/main/courses']">课程</a></li>
+        <li><a href="#">训练</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="sign-in" [routerLink]="['/login']">登录</a></li>
+        <li><a class="sign-up" [routerLink]="['/register']">注册</a></li>
+      </ul>
+
+      <form class="navbar-form navbar-right">
+        <div  class="form-group">
+          <label>
+            <i class="fa fa-search"></i>
+          </label>
+          <input type="text" class="form-control" placeholder="搜索 课程/问答">
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</nav>

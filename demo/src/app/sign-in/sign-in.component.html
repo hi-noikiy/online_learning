@@ -1,0 +1,42 @@
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="center-block"><a [routerLink]="['/main']">在线学习</a></h1>
+      </div>
+    </div>
+    <div class="row wrapper">
+      <div class="col-sm-12 col-md-12">
+        <div class="sign">
+          <form class="main-form">
+            <div class="form-group text-center">
+              <h3>登陆</h3>
+            </div>
+            <div class="form-group">
+              <label>邮箱</label>
+              <input type="email" class="form-control" placeholder="请输入邮箱">
+            </div>
+            <div class="form-group">
+              <label>密码</label>
+              <input type="password" class="form-control" placeholder="请输入密码">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> 七天内免登陆
+              </label>
+              <div class="">
+                <a href="#">忘记密码?</a>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-block btn-success">登陆</button>
+            </div>
+            <div class="text-center line">
+              没有账号?<a [routerLink]="['/register']">免费注册>></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
