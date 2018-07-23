@@ -86,3 +86,19 @@
 	border-color: #0c9;
 	border-radius: 0;
 }
+
+.course-infobox-price a.vip_free_preview, .course-infobox-price span {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 0;
+    font-size: 18px;
+    color: #999;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.course-infobox-price .last-learn-lab {
+    margin-left: 10px;
+    font-size: 14px;
+    text-align: left;
+}
