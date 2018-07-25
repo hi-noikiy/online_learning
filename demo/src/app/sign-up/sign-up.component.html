@@ -1,0 +1,51 @@
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="center-block"><a [routerLink]="['/main']">在线学习</a></h1>
+      </div>
+    </div>
+    <div class="row wrapper">
+      <div class="col-sm-12 col-md-12">
+        <div class="sign">
+          <form class="main-form" [formGroup]="formModel" (submit)="onSubmit()">
+            <div class="form-group text-center">
+              <h3>注册</h3>
+            </div>
+            <div class="form-group">
+                <label>邮箱</label>
+                <input type="email" class="form-control" placeholder="请输入邮箱" formControlName="username">
+                <span [hidden]="emailError()" class="error">
+                    {{ email_error }}
+                </span>
+            </div>
+            <div formGroupName="passwordsGroup">
+                <div class="form-group">
+                    <label>密码</label>
+                    <input type="password" class="form-control" placeholder="请输入密码" formControlName="password1">
+                    <span [hidden]="passwordError()" class="error">
+                            {{ password_error }}
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label>确认密码</label>
+                    <input type="password" class="form-control" placeholder="请再次入密码" formControlName="password2">
+                    <div [hidden]="formModel.get('passwordsGroup').get('password2').untouched || formModel.get('passwordsGroup').get('password1').untouched">
+                        <span [hidden]="!formModel.hasError('my_equal', ['passwordsGroup'])" class="error">
+                            密码不匹配
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-block btn-success">注册</button>
+            </div>
+            <div class="text-center line">
+              已有账号?<a [routerLink]="['/login']">去登陆</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

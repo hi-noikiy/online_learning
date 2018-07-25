@@ -1,0 +1,77 @@
+.sidebox {
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #fff;
+}
+
+.sidebox-header {
+    padding: 0 0 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebox-header {
+    overflow: hidden;
+}
+
+.sidebox-title {
+    float: left;
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.sidebox-body {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.mooc-teacher .mooc-content a {
+    display: block;
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+	text-decoration: none;
+}
+
+.mooc-teacher .mooc-content img {
+    width: 100%;
+}
+
+.mooc-teacher .mooc-info div {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #4c5157;
+}
+
+.mooc-teacher .mooc-info .name {
+    font-size: 15px;
+    margin-right: 10px;
+    color: #4c5157;
+}
+
+.mooc-teacher .mooc-extra-info {
+    padding: 5px;
+    clear: both;
+}
+
+.mooc-teacher .mooc-extra-info div {
+    font-size: 14px;
+    color: #4c5157;
+    line-height: 24px;
+}
+
+.sidebox-footer {
+    overflow: hidden;
+}
+
+.mooc-course .mooc-footer a, .mooc-teacher .mooc-footer a {
+    float: right;
+    font-size: 14px;
+}
+
+.sidebox-footer a {
+    color: #529fd2;
+}

@@ -1,0 +1,64 @@
+<div class="form-horizontal content">
+	<div class="form-horizontal">
+		<div class="form-group change-header-img">
+			<label class="col-sm-3 control-label">头像</label>
+			<div class="col-sm-4">
+				<a id="pickfiles" style="z-index: 1;">
+               		<img class="user-img" src="https://dn-simplecloud.shiyanlou.com/gravatar720931.png?v=1525757162483&amp;imageView2/1/w/200/h/200">
+               		<div>修改头像</div>
+            	</a>
+				<div class="moxie-shim" style="">
+					<input type="file" style="">
+				</div>
+			</div>
+		</div>
+		<form class="form-horizontal" method="post">
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="name">昵称</label>
+				<div class="col-sm-4">
+					<input class="form-control" id="name" max="64" min="2" name="name" type="text" value="RainbomSea">
+					<span class="help-block error"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="sex">性别</label>
+				<div class="col-sm-4 radio">
+					<ul id="sex">
+						<li>
+							<input checked="" id="sex-0" name="sex" type="radio" value="0">
+							<label for="sex-0">男</label>
+						</li>
+						<li>
+							<input id="sex-1" name="sex" type="radio" value="1">
+							<label for="sex-1">女</label>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label" for="job">职位</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="job" name="job">
+						<option selected="" value="-1">请选择</option>
+						<option value="30">Linux研发工程师</option>
+						<option value="29">前端工程师</option>
+						<option value="28">Android工程师</option>
+						<option value="27">运维工程师</option>
+						<option value="26">测试工程师</option>
+						<option value="25">DBA工程师</option>
+						<option value="24">产品经理</option>
+						<option value="23">硬件开发工程师</option>
+						<option value="22">Python研发工程师</option>
+						<option value="21">PHP研发工程师</option>
+						<option value="20">JAVA研发工程师</option>
+						<option value="19">Ruby研发工程师</option>
+						<option value="18">iOS研发工程师</option>
+						<option value="17">教师</option>
+						<option value="16">学生</option>
+						<option value="1">其他</option></select>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

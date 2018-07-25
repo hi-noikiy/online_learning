@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 layout-body">
+			<div class="clearfix profile-tab-content" id="profile-container">
+				<div class="pro-body">
+					<div class="col-md-3">
+						<div class="tab-content content">
+							<div role="tabpanel" class="tap-pane active">
+								<div class="panel-content">
+									<div class="profile-menu active">
+										<a class="menu-item menu-active" [routerLink]="['/user/info/']">
+                                					基本信息
+                            					</a>
+										<a class="menu-item " [routerLink]="['/user/info/account']">
+                                					账号密码
+                            					</a>
+										<a class="menu-item " [routerLink]="['/user/info/']">
+                                					邮件通知
+                            					</a>
+										<a class="menu-item " [routerLink]="['/user/info/']">
+                                					激活码
+                            					</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9 profile-content">
+						<router-outlet></router-outlet>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

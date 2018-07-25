@@ -1,0 +1,123 @@
+.userinfo-banner {
+  padding: 5px;
+  border: none;
+}
+
+.userinfo-banner .banner-container {
+  background: #fff;
+  padding: 20px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  height: 150px;
+  border: 1px solid #eee;
+}
+
+.userinfo-banner-avatar {
+  margin-right: 30px;
+  text-align: center;
+}
+
+.user-avatar {
+  position: relative;
+  display: inline-block;
+}
+
+.userinfo-banner-avatar .user-avatar .avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.userinfo-banner-details {
+  margin-top: 5px;
+}
+
+.userinfo-banner-details>div {
+  margin-bottom: 13px;
+}
+
+.join-date {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: .5px;
+  line-height: 20px;
+}
+
+.userinfo-banner-meta .username {
+  font-weight: 700;
+  font-size: 22px;
+  color: #a4a4a4;
+}
+
+.userinfo-banner-meta .user-level {
+  font-size: 22px;
+  margin-left: 10px;
+}
+
+.user-level {
+  color: #fec42d;
+  font-weight: 700;
+}
+
+.userinfo-banner-meta .vip-info {
+  font-size: 12px;
+  display: inline-block;
+}
+
+i {
+  margin-right: 4px;
+}
+
+.userinfo-banner-meta .vip-info .edit-profile {
+  font-size: 18px;
+  color: #666;
+  margin-left: 10px;
+}
+
+.userinfo-banner-medal {
+  width: 270px;
+  text-align: center;
+  height: 110px;
+  border: 1px dashed #eee;
+  border-radius: 5px;
+}
+
+.userinfo-banner-medal .userinfo-medal-wall {
+  height: 100%;
+  overflow: hidden;
+}
+
+.userinfo-banner-medal .userinfo-medal-wall .user-medals {
+  height: 81px;
+  padding: 30px 0 16px;
+  font-size: 14px;
+  color: #a4a4a4;
+}
+
+.userinfo-banner-medal .userinfo-medal-wall .user-medals .no-medals {
+  display: inline-block;
+  line-height: 35px;
+}
+
+.user-medals-get a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .userinfo-banner .banner-container {
+    height: auto;
+    text-align: center;
+  }
+  .userinfo-banner-avatar, .userinfo-banner-details {
+    margin: 0;
+    float: none !important;
+  }
+  .userinfo-banner-details {
+    margin: 10px 0;
+  }
+  .userinfo-banner-medal {
+    width: 100%;
+  }
+}

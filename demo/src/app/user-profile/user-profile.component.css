@@ -1,0 +1,119 @@
+.content {
+  position: relative;
+  padding: 44px 50px;
+  min-height: 700px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.change-header-img, .profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.change-header-img .control-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #565656;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+}
+
+.change-header-img #pickfiles {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-img {
+  width: 125px;
+  height: 125px;
+  border-radius: 25px;
+  vertical-align: -5px;
+}
+
+.change-header-img #pickfiles div {
+  position: absolute;
+  bottom: -28px;
+  width: 100%;
+  padding: 4px 0;
+  color: #fff;
+  background: rgba(0, 0, 0, .7);
+  font-size: 14px;
+  text-align: center;
+  transition: bottom .5s;
+  -moz-transition: bottom .5s;
+  -webkit-transition: bottom .5s;
+  -o-transition: bottom .5s;
+}
+
+.change-header-img #pickfiles:hover div {
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .control-label {
+    width: 110px;
+    padding-right: 0;
+  }
+}
+
+.moxie-shim {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+}
+
+.moxie-shim input {
+  font-size: 999px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.control-label {
+    font-size: 16px;
+    color: #565656;
+    font-weight: 500;
+    text-align: left;
+}
+
+.form-group .form-control {
+    border-radius: 0;
+}
+
+form .help-block {
+    color: #d9534f;
+    font-size: 12px;
+}
+
+#sex {
+    margin: 0;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+}
+
+#sex li label {
+    padding: 0;
+    display: inline-block;
+    font-size: 14px;
+}
+
+#sex li {
+    float: left;
+    margin-right: 40px;
+    list-style-type: none;
+}
