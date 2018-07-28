@@ -5,11 +5,11 @@
                 <app-course-cates-title></app-course-cates-title>
             </div>
             <div class="content position-relative course-items-container">
-                <div class="row">
-                    <app-course-box></app-course-box>
+                <div class="row" *ngIf="course">
+                    <app-course-box [courseCss]= "courseBoxCss" [courses]="course"></app-course-box>
                 </div>
                 <!-- 分页 -->
-                <app-pagination></app-pagination>
+                <app-pagination [total]="total"></app-pagination>
             </div>
         </div>
     </div>

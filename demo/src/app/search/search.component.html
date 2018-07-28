@@ -11,13 +11,18 @@
                         <a href="#course-result" aria-controls="course-result" role="tab" data-toggle="tab">课程  ( 99 ) </a>
                     </li>
                     <li role="presentation">
-                        <a href="/search?category=question&amp;search=python" aria-controls="question-result" role="tab" data-toggle="tab">问答 ( 3740 ) </a>
+                        <a href="#question-result" aria-controls="question-result" role="tab" data-toggle="tab">问答 ( 3740 ) </a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <app-course-box></app-course-box>
+                    <div role="tabpanel" class="tab-pane active" id="course-result">
+                        <app-course-box></app-course-box>
+                        <app-pagination></app-pagination>
+                    </div>
+                    <div role="tabpanel" class="tab-pane active" id="question-result">
+                        
+                    </div>
                 </div>
-                <app-pagination></app-pagination>
             </div>
         </div>
 

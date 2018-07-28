@@ -18,36 +18,10 @@
 					<textarea class="comment-form-content" placeholder="输入您想说的话..."></textarea>
 					<button class="pull-right btn btn-primary comment-form-add">发表评论</button>
 				</div>
+
 				<div class="comment-title">最新评论</div>
-				<div class="comment-list">
-					<div class="comment-item-wrapper text-center ">
-						<div class="row comment-list-item no-margin">
-							<div class="col-md-1">
-								<div class="user-avatar ">
-									<a class="avatar" href="/user/720931/" target="_blank">
-                                        <img src="https://dn-simplecloud.shiyanlou.com/gravatar720931.png?v=1525757162483&amp;imageView2/1/w/200/h/200">
-                                    </a>
-								</div>
-							</div>
-							<div class="col-md-11 comment-item-body text-left">
-								<div class="user-username">
-									<a class="username" href="/user/720931/" target="_blank">RainbomSea</a>
-									<span class="user-level">L7</span>
-								</div>
-								<div class="comment-item-content markdown-box" style="word-wrap: break-word;">
-									<p>这个课程非常好~~~</p>
-								</div>
-								<div class="assistant-wrapper">
-									<div class="comment-item-date">几秒前</div>
-									<!-- <div class="comment-item-delete" data-url="/comments/48445">删除</div> -->
-									<div class="comment-item-reply" data-pid="48445">
-										<img src="https://www.shiyanlou.com/static/img/trylab/icon-reply.png">回复
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+
+                <app-comment-box></app-comment-box>
 				<app-pagination></app-pagination>
 			</div>
 		</div>
@@ -55,41 +29,8 @@
 		<div class="tab-pane" role="tabpanel" id="questions">
 			<a class="btn btn-success" data-toggle="modal" href="#askquestion">我要提问</a>
 			<hr>
-			<ul class="row question-items">
-				<li class="question-item">
-					<div class="col-md-10">
-						<div class="col-sm-2 question-item-author">
-							<div class="user-avatar ">
-								<a class="avatar" href="/user/741283/" target="_blank">
-                					<img src="https://dn-simplecloud.shiyanlou.com/gravatar741283.png?v=1529592334830&amp;imageView2/1/w/200/h/200">
-            					</a>
-							</div>
-						</div>
-						<div class="col-sm-10">
-							<h4>
-                                <a class="question-item-title" href="https://www.shiyanlou.com/questions/82498" target="_blank">课后作业不知道我的答案可以吗</a>
-                            </h4>
-							<div class="question-item-summary">
-								<div class="user-username">
-									<a class="username" href="/user/741283/" target="_blank">nttzl </a>
-									<span class="user-level">L90</span>
-								</div>
-								<span class="question-item-date">1 小时前</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-2 question-item-rank">
-						<div class="question-item-answered">
-							<div>0</div>
-							<div>回复</div>
-						</div>
-						<div class="question-item-views">
-							<div>3</div>
-							<div>查看</div>
-						</div>
-					</div>
-				</li>
-			</ul>
+			<app-questions-box></app-questions-box>
 			<app-pagination></app-pagination>
 		</div>
 	</div>
+</div>

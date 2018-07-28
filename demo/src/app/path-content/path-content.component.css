@@ -1,0 +1,139 @@
+.content {
+	position: relative;
+    margin-bottom: 10px;
+	padding: 30px;
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.content {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.path-description {
+    margin: 0;
+    background: #fff;
+    box-shadow: 0 1px 3px 0 #c2c2c2;
+    overflow: hidden;
+}
+
+.path-description .path-desc-top {
+    height: 250px;
+}
+
+.path-description .path-desc-top .name-total-box {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.path-description .path-desc-top .name-total-box h4 {
+    font-family: Microsoft Yahei;
+    font-size: 30px;
+    color: #fff;
+}
+
+.path-description .path-desc-top .path-desc-text {
+    color: #fff;
+    font-size: 14px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.path-description .path-desc-btm {
+    height: 100px;
+    font-size: 18px;
+    padding-top: 32px;
+    color: #787878;
+}
+
+.path-description .path-desc-btm>div {
+    padding-top: 6px;
+}
+
+.path-description .path-desc-btm .jion-btn-container {
+    padding-top: 0;
+    display: inline-block;
+}
+
+.btn-join-path {
+    font-size: 16px;
+    padding: 7px 12px;
+    background: #ff9717;
+    box-shadow: 1px 3px rgba(0,0,0,.2);
+    border: none;
+    border-radius: 0;
+}
+
+.btn-join-path, .btn-join-path:hover {
+    color: #fff;
+}
+
+.btn-path-operation {
+    font-size: 16px;
+    width: 210px;
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-join-path, .btn-join-path:hover {
+    color: #fff;
+}
+
+.btn:active, .btn.active {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}
+
+.path-description .path-desc-btm .jion-path-remind {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.need-learn-time {
+    font-size: 16px;
+    color: #666;
+}
+
+.need-learn-time .course-num, .need-learn-time .course-total-hour {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.need-learn-time .course-total-hour {
+    margin-right: 10px;
+}
+
+.layout-body, .layout-side {
+    padding: 0 5px;
+}
+
+
+.nav-tabs {
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-tabs>li>a {
+    margin: 0 48px 0 0;
+    padding: 0 0 4px;
+    color: #565a61;
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:focus, .nav-tabs>li>a:hover {
+    color: #4c5157;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-bottom-color: #0c9;
+}

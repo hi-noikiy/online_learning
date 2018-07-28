@@ -1,43 +1,94 @@
 <nav class="navbar navbar-default navbar-fixed-top home-header">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-      data-target="#header-navbar-collaspse" aria-expanded="false">
-        <span class="sr-only">在线学习</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" [routerLink]="['/user']">
-       在线学习
-      </a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="header-navbar-collaspse">
-      <ul class="nav navbar-nav header-navbar">
-
-          <li><a [routerLink]="['/main']">首页</a></li>
-          <li><a [routerLink]="['/main/courses']">课程</a></li>
-          <li><a href="#">路径</a></li>
-          <li><a [routerLink]="['/main/search']">训练</a></li>
-
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a class="sign-in" [routerLink]="['/login']">登录</a></li>
-        <li><a class="sign-up" [routerLink]="['/register']">注册</a></li>
-      </ul>
-
-      <form class="navbar-form navbar-right">
-        <div  class="form-group">
-          <label>
-            <i class="fa fa-search"></i>
-          </label>
-          <input type="text" class="form-control" placeholder="搜索 课程/问答">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#header-navbar-collaspse" aria-expanded="false">
+                <span class="sr-only">在线学习</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/main']">
+                在线学习
+            </a>
         </div>
-      </form>
+
+        <div class="collapse navbar-collapse" id="header-navbar-collaspse">
+            <ul class="nav navbar-nav header-navbar">
+
+                <li><a [routerLink]="['/main']">首页</a></li>
+                <li><a [routerLink]="['/main/courses']">课程</a></li>
+                <li><a [routerLink]="['/main/paths']">路径</a></li>
+                <li><a [routerLink]="['/main/questions']">讨论</a></li>
+            </ul>
+
+            <ul [hidden]="isLogin" class="nav navbar-nav navbar-right">
+                <li><a class="sign-in" [routerLink]="['/login']">登录</a></li>
+                <li><a class="sign-up" [routerLink]="['/register']">注册</a></li>
+            </ul>
+
+            <ul [hidden]="!isLogin" class="nav navbar-nav navbar-right header-user" style="padding: 10px 0;">
+                <li class="my-course">
+                    <a [routerLink]="['/user', 1]">我的课程</a>
+                    <ul class="course">
+                        <li class="title"><i class="fa fa-clock-o"></i>已学课程</li>
+                        <li><a href="/courses/1"><span>·</span>Linux 基础入门（新版）</a></li>
+                        <li><a href="/courses/19"><span>·</span>HTML基础入门</a></li>
+                        <li><a href="/courses/4"><span>·</span>Git 实战教程</a></li>
+                        <li><a href="/courses/98"><span>·</span>TCP/IP网络协议基础</a></li>
+                        <li><a href="/courses/868"><span>·</span>Github 快速上手实战教程</a></li>
+                        <p><a href="/user/720931/" class="see-more">查看更多</a></p>
+                    </ul>
+                </li>
+                <li class="header-message">
+                    <a [routerLink]="['/user', 1, 'message']">
+                        <i class="fa fa-bell-o"></i>
+                    </a>
+                </li>
+                <li class="header-userbox">
+                    <a [routerLink]="['/user', 1]">
+                        <img class="header-avatar" data-v-815c5224="" src="https://dn-simplecloud.shiyanlou.com/gravatar720931.png?v=1525757162483&amp;imageView2/1/w/200/h/200">
+                    </a>
+                    <div class="popover bottom fade in user">
+                        <div class="arrow"></div>
+                        <div class="user-info">
+                            <a href="/user/720931/">
+                                <img src="https://dn-simplecloud.shiyanlou.com/gravatar720931.png?v=1525757162483&amp;imageView2/1/w/200/h/200" class="pull-left">
+                            </a>
+                            <div class="pull-left username">
+                                <span>RainbomSea</span>
+                                <span class="user-level">&nbsp;L7</span>
+                                <p data-v-815c5224="">今日有效学习0min</p>
+                            </div>
+                        </div>
+                        <div class="user-links">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <a [routerLink]="['/user', 1]">我的主页</a>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <a href="/user/720931/">个人设置</a>
+                                </div>
+                            </div>
+                            <div class="log-out">
+                                <a  style="cursor: pointer;" (click)="loginOut()">退出登录</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+
+            <form [formGroup]="forModel" class="navbar-form navbar-right" (submit)="onSubmit()">
+                <div  class="form-group">
+                    <label>
+                        <i class="fa fa-search" (click)="onSubmit()"></i>
+                    </label>
+                    <input type="text" class="form-control" placeholder="搜索 课程/问答" formControlName="search">
+                </div>
+            </form>
+
+        </div>
 
     </div>
-
-  </div>
 </nav>

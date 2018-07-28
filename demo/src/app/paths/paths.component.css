@@ -1,0 +1,16 @@
+.learn-path-banner {
+    height: 340px;
+    background: url(https://static.shiyanlou.com/img/path_bg.png) no-repeat;
+    background-position: 50% 0;
+    margin-top: -20px;
+    margin-bottom: -30px;
+}
+
+
+.layout-body, .layout-side {
+    padding: 0 5px;
+}
+
+.learn-path-list {
+    margin: 0 -15px;
+}

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeHandpickCourseComponent implements OnInit {
 
+  courseBoxCss = 'col-md-3 col-sm-6 course';
+
   constructor() { }
 
   ngOnInit() {

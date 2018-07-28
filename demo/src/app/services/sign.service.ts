@@ -20,11 +20,10 @@ export class SignService {
     return this.http.post('/login', user_info);
   }
 
-}
+  loginTest(user_info: any) {
 
-export interface Config {
-  result: boolean;
-  msg: string;
+  }
 
 }
+
 

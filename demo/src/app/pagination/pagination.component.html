@@ -1,38 +1,18 @@
 <nav class="pagination-container">
-	<ul class="pagination">
-		<li class="disabled">
-			<a href="javascript:;" aria-label="Previous">
+    <ul class="pagination">
+        <li class="disabled">
+            <a href="javascript:;" aria-label="Previous">
                 <span aria-hidden="true">上一页</span>
             </a>
-		</li>
-		<li class="active">
-			<a href="javascript:;">1</a>
-		</li>
-		<li class="">
-			<a href="javascript:;">2</a>
-		</li>
-		<li class="">
-			<a href="javascript:;">3</a>
-		</li>
-		<li class="">
-			<a href="javascript:;">4</a>
-		</li>
-		<li class="">
-			<a href="javascript:;">5</a>
-		</li>
-		<li>
-			<a href="javascript:;">...</a>
-		</li>
-		<li class="">
-			<a href="javascript:;">21</a>
-		</li>
-		<li class="">
-			<a href="javascript:;">22</a>
-		</li>
-		<li class="">
-			<a aria-label="Next" href="javascript:;">
+        </li>
+        <li *ngFor="let i of total | demoNumber:1" class="">
+            <a href="javascript:;">{{ i }}</a>
+        </li>
+
+        <li class="">
+            <a aria-label="Next" href="javascript:;">
                 <span aria-hidden="true">下一页</span>
             </a>
-		</li>
-	</ul>
+        </li>
+    </ul>
 </nav>

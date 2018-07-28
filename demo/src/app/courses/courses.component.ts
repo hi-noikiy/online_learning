@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CourseService} from '../services/course.service';
+import {Course} from '../class/course';
+import {aa} from '../class/aa';
 
 @Component({
   selector: 'app-courses',
@@ -8,6 +10,12 @@ import {CourseService} from '../services/course.service';
 })
 export class CoursesComponent implements OnInit {
 
+  courseBoxCss = 'col-md-3 col-sm-6 course';
+
+  course: Course[];
+
+  total: number;
+
   private course_service;
 
   constructor(private courseService: CourseService) {
@@ -15,10 +23,11 @@ export class CoursesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.courseService.getCourses()
-      .subscribe(data => {
-        console.log(data);
+    this.courseService.getCourses(1, 20)
+      .subscribe((data: aa ) => {
+        this.course = data.rows;
+        this.total = data.total / 20;
+        console.log(this.total);
       });
   }
-
 }

@@ -35,6 +35,17 @@ import {SignService} from './services/sign.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
+import { PathsComponent } from './paths/paths.component';
+import { PathBoxComponent } from './path-box/path-box.component';
+import { PathContentComponent } from './path-content/path-content.component';
+import { UserMessageComponent } from './user-message/user-message.component';
+import { MessageBoxComponent } from './message-box/message-box.component';
+import { UserVisitorComponent } from './user-visitor/user-visitor.component';
+import { QuestionsComponent } from './questions/questions.component';
+import { NavTabsBoxComponent } from './nav-tabs-box/nav-tabs-box.component';
+import { QuestionsBoxComponent } from './questions-box/questions-box.component';
+import { CommentBoxComponent } from './comment-box/comment-box.component';
+import { DemoNumberPipe } from './pipe/demo-number.pipe';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -42,18 +53,21 @@ const routeConfig: Routes = [
       {path: '', component: HomeComponent},
       {path: 'courses', component: CoursesComponent},
       {path: 'courses/:id', component: CourseContentComponent},
-      {path: 'search', component: SearchComponent}
+      {path: 'paths', component: PathsComponent},
+      {path: 'paths/:path_name', component: PathContentComponent},
+      {path: 'search', component: SearchComponent},
+      {path: 'questions', component: QuestionsComponent}
     ]},
-  {path: 'user', component: UserComponent, children: [
-      {path: '', redirectTo: '/user/center', pathMatch: 'full'},
-      {path: 'center', component: UserCenterComponent, children: [
+  {path: 'user/:id', component: UserComponent, children: [
+      {path: '', component: UserCenterComponent, children: [
           {path: '', component: UserLearnedCoursesComponent},
           {path: 'follow', component: UserCenterFollowComponent},
         ]},
       {path: 'info', component: UserInfoComponent, children: [
           {path: '', component: UserProfileComponent},
           {path: 'account', component: UserAccountComponent}
-        ]}
+        ]},
+      {path: 'message', component: UserMessageComponent}
     ]},
   {path: 'login', component: SignInComponent},
   {path: 'register', component: SignUpComponent},
@@ -92,6 +106,17 @@ const routeConfig: Routes = [
     CommentComponent,
     CourseTeacherComponent,
     SearchComponent,
+    PathsComponent,
+    PathBoxComponent,
+    PathContentComponent,
+    UserMessageComponent,
+    MessageBoxComponent,
+    UserVisitorComponent,
+    QuestionsComponent,
+    NavTabsBoxComponent,
+    QuestionsBoxComponent,
+    CommentBoxComponent,
+    DemoNumberPipe,
   ],
   imports: [
     BrowserModule,

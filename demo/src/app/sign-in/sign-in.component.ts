@@ -3,6 +3,7 @@ import {SignService} from '../services/sign.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {emailValidator} from '../validators/validators';
 import {Router} from '@angular/router';
+import {user} from '../class/user';
 
 @Component({
   selector: 'app-sign-in',
@@ -29,6 +30,18 @@ export class SignInComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onSubmitTest() {
+    if (this.formModel.valid) {
+      const login_name = '123@qq.com';
+      const login_pwd = '123456';
+      console.log([login_name, login_pwd]);
+      if (login_name === '123@qq.com' && login_pwd === '123456') {
+        user.isLogin = true;
+        this.router.navigate(['../']);
+      }
+    }
   }
 
   onSubmit() {
@@ -69,7 +82,4 @@ export class SignInComponent implements OnInit {
     }
     return true;
   }
-
-
-
 }

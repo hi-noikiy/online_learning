@@ -35,24 +35,6 @@
   font-size: 20px;
 }
 
-.sign-in, .sign-up{
-  padding: 26px;
-  cursor: pointer;
-}
-
-.home-header .sign-up{
-  color: #fff;
-  background: #08bf91;
-}
-
-.home-header .sign-in:hover{
-  background: #eee;
-}
-
-.home-header .sign-up:hover{
-  background: #1ad1a3;
-}
-
 .home-header .form-group{
   position: relative;
 }
@@ -62,4 +44,295 @@
   top: 5px;
   right: 10px;
   cursor: pointer;
+}
+
+/*.home-header .navbar-nav{*/
+    /*padding: 10px 0;*/
+/*}*/
+
+.home-header .navbar-nav>li{
+    color: #08bf91;
+    background: none;
+    position: relative;
+}
+
+.home-header .navbar-nav>li>a {
+    color: #666;
+    font-size: 16px;
+}
+
+.my-course .course {
+    width: 223px;
+    background: #fff;
+    display: none;
+    list-style-type: disc;
+    position: absolute;
+    right: -70px;
+    margin: 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px #ccc;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.home-header-navbar .navbar-nav .my-course .course>li, .home-header .navbar-nav .my-course .course>li {
+    margin-bottom: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666;
+    list-style-type: disc;
+    text-align: left;
+}
+
+.home-header-navbar .navbar-nav .my-course .course>li.title, .home-header .navbar-nav .my-course .course>li.title {
+    color: #a4a4a4;
+    font-size: 14px;
+    margin: 5px 0 15px;
+}
+
+.my-course .course a {
+    font-size: 14px;
+    color: #666;
+}
+
+.my-course .course>li a>span {
+    font-size: 16px;
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+.my-course .course p {
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+    height: 50px;
+    line-height: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+.my-course .course a.see-more {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #eee;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.my-course .course a {
+    font-size: 14px;
+    color: #666;
+}
+
+.home-header-navbar .navbar-nav .my-course:hover ul.course, .home-header-navbar .navbar-nav ul.course:hover, .home-header .navbar-nav .my-course:hover ul.course, .home-header .navbar-nav ul.course:hover {
+    display: block;
+}
+
+.home-header .navbar-nav>li>a:hover {
+    color: #08bf91;
+    background: none;
+}
+
+i {
+    margin-right: 4px;
+}
+
+.home-header .navbar-nav .my-course .course a:hover {
+    color: #08bf91;
+    text-decoration: none;
+}
+
+.home-header-navbar .navbar-nav>li, .home-header-navbar .navbar-nav>li.active>a, .home-header-navbar .navbar-nav>li.active>a:focus, .home-header-navbar .navbar-nav>li.active>a:hover, .home-header-navbar .navbar-nav>li>a:focus, .home-header-navbar .navbar-nav>li>a:hover, .home-header .navbar-nav>li, .home-header .navbar-nav>li.active>a, .home-header .navbar-nav>li.active>a:focus, .home-header .navbar-nav>li.active>a:hover, .home-header .navbar-nav>li>a:focus, .home-header .navbar-nav>li>a:hover {
+    color: #08bf91;
+    background: none;
+}
+
+.home-header-navbar .navbar-nav>li>a, .home-header .navbar-nav>li>a {
+    color: #666;
+    font-size: 16px;
+}
+
+.header-message i.fa-bell-o{
+    font-size: 22px;
+    margin-top: -3px;
+}
+
+.header-avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.header-userbox a{
+    display: block;
+    padding: 0;
+}
+
+.user{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: -150px;
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px #ccc;
+    z-index: 999 !important;
+}
+
+.header-userbox:hover .user{
+    display: block;
+}
+
+.user.popover > .arrow{
+    left: 63%;
+}
+
+.user-info{
+    overflow: hidden;
+}
+
+.user-info a {
+    color: #7b7f88;
+}
+
+.header-userbox a{
+    display: block;
+    padding: 0;
+}
+
+.user-info a{
+    float: left;
+}
+
+.user-info a img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.username{
+    position: relative;
+}
+
+.username > span{
+    display: inline-block;
+    max-width: 150px;
+    color: #666;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.user-level {
+    color: #fec42d;
+    font-weight: 700;
+}
+
+.username > span{
+    display: inline-block;
+    max-width: 150px;
+    color: #666;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.username > span.user-level{
+    color: #fec42d;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.username > p{
+    color: #A4A4A4;
+    font-size: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 170px;
+    text-overflow: ellipsis;
+}
+
+.user-links{
+    margin-top: 30px;
+}
+
+.user-links .row > div{
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+.user-links .row > div{
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+.user-links .row a, .user-links .row .invite-user-btn{
+    width: 115px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 0 10px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #eee;
+}
+
+.user-links .row a:hover, .user-links .row .invite-user-btn:hover {
+    background: #eee;
+    text-decoration: none;
+}
+
+.log-out{
+    display: block;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+    padding-top: 20px;
+    width: 100%;
+    text-align: right;
+}
+
+.log-out a{
+    display: inline-block;
+    color: #999;
+    font-size: 14px;
+    padding: 0;
+}
+
+.log-out a:hover, .log-out a:focus {
+    text-decoration: none;
+    color: #999;
+}
+
+.sign-in, .sign-up{
+    padding: 26px;
+    cursor: pointer;
+}
+
+.home-header .sign-up{
+    color: #fff !important;
+    background: #08bf91 !important;
+}
+
+.home-header .sign-in:hover{
+    background: #eee !important;
+}
+
+.home-header .sign-up:hover{
+    background: #1ad1a3 !important;
 }
