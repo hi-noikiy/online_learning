@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Course} from '../class/course';
-import {aa} from '../class/aa';
 
 @Component({
   selector: 'app-course-box',

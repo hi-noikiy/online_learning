@@ -33,3 +33,7 @@
     color: #9b9da2;
     background: transparent;
 }
+
+a {
+    cursor: pointer;
+}

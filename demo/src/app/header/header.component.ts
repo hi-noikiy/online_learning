@@ -32,7 +32,6 @@ export class HeaderComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log()
     if (this.forModel.get('search').value !== '') {
       this.router.navigate(['/main/search']);
     }

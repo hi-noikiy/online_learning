@@ -1,16 +1,16 @@
-<nav class="pagination-container">
+<nav class="pagination-container" *ngIf="page">
     <ul class="pagination">
-        <li class="disabled">
-            <a href="javascript:;" aria-label="Previous">
+        <li [class.disabled]="theSame(currentPage, 1)">
+            <a aria-label="Previous" (click)="getPage(-1)">
                 <span aria-hidden="true">上一页</span>
             </a>
         </li>
-        <li *ngFor="let i of total | demoNumber:1" class="">
-            <a href="javascript:;">{{ i }}</a>
+        <li *ngFor="let i of page" [class.active]="theSame(currentPage, i)" >
+            <a (click)="getPage(i)">{{ i }}</a>
         </li>
 
-        <li class="">
-            <a aria-label="Next" href="javascript:;">
+        <li [class.disabled]="theSame(currentPage, total)">
+            <a aria-label="Next" (click)="getPage(0)" >
                 <span aria-hidden="true">下一页</span>
             </a>
         </li>
