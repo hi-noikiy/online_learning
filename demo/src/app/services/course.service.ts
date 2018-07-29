@@ -24,13 +24,12 @@ export class CourseService {
     return this.http.get<aa>('/course/findPage.do?page=' + page + '&rows=' + num);
   }
 
-  // http://localhost:9101/kind/findAll.do
-  getCatesTitle(): Observable<any> {
-    return null;
-  }
-
-  getCatesContent(): Observable<any> {
-    return null;
+  /**
+   * 获取所有的课程标签
+   * @returns {Observable<Object>}
+   */
+  getLables(): Observable<string[]> {
+    return this.http.get<string[]>('/kind/findAll.do');
   }
 
 }

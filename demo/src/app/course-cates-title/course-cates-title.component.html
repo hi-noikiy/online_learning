@@ -14,7 +14,7 @@
 <!--</div>-->
 <div class="row course-cates course-cates-tags">
 	<div class="col-md-1 course-cates-title">标签：</div>
-	<div class="col-md-11 course-cates-content course-tags">
+	<div class="col-md-11 course-cates-content" [class.course-tags]="course_tags">
 		<a class="active" href="#">全部</a>
 		<a class="" href="#">Python</a>
 		<a class="" href="#">Linux</a>
@@ -80,9 +80,9 @@
 		<a class="" href="#">React</a>
 		<a class="" href="#">Ansible</a>
 	</div>
-	<a class="show-more-btn" href="#">
+	<a class="show-more-btn" (click)="changeTags(text_tags)">
         <i class="fa fa-angle-down"></i>
-        <span>更多</span>
+        <span>{{ text_tags }}</span>
 	</a>
 </div>
 <div class="courses-sort">

@@ -181,3 +181,7 @@ i {
     bottom: 118px;
   }
 }
+
+a{
+    cursor: pointer;
+}
