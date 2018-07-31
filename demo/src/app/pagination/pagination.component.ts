@@ -24,7 +24,6 @@ export class PaginationComponent implements OnInit {
    * 初始化页面索引
    */
   ngOnInit() {
-    this.total = 888;
     this.currentPage = 1;
     console.log(this.total);
     this.total = Math.ceil(this.total / 20);

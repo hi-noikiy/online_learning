@@ -46,6 +46,12 @@ import { NavTabsBoxComponent } from './nav-tabs-box/nav-tabs-box.component';
 import { QuestionsBoxComponent } from './questions-box/questions-box.component';
 import { CommentBoxComponent } from './comment-box/comment-box.component';
 import { DemoNumberPipe } from './pipe/demo-number.pipe';
+import { QuillModule } from 'ngx-quill';
+import { VideoBodyComponent } from './video-body/video-body.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { AdminSiderComponent } from './admin-sider/admin-sider.component';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -71,6 +77,8 @@ const routeConfig: Routes = [
     ]},
   {path: 'login', component: SignInComponent},
   {path: 'register', component: SignUpComponent},
+  {path: 'admin', component: AdminComponent},
+  {path: 'admin-login', component: AdminLoginComponent},
   {path: '**', component: Code404Component}
 ];
 
@@ -117,13 +125,19 @@ const routeConfig: Routes = [
     QuestionsBoxComponent,
     CommentBoxComponent,
     DemoNumberPipe,
+    VideoBodyComponent,
+    AdminLoginComponent,
+    AdminComponent,
+    AdminHeaderComponent,
+    AdminSiderComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routeConfig),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    QuillModule
   ],
   providers: [SignService],
   bootstrap: [AppComponent]

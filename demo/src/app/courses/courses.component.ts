@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CourseService} from '../services/course.service';
 import {Course} from '../class/course';
 import {aa} from '../class/aa';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -27,15 +27,16 @@ export class CoursesComponent implements OnInit {
 
   constructor(private courseService: CourseService, private routerInfo: ActivatedRoute) {
 
-    try {
-      this.page = this.routerInfo.snapshot.queryParams['page'];
-    } catch (e) {
-      this.page = 1;
-    }
-
   }
 
   ngOnInit() {
+    try {
+      this.routerInfo.queryParams.subscribe((params: Params) => this.page = params['page']);
+      // this.page = this.routerInfo.snapshot.queryParams['page'];
+    } catch (e) {
+      this.page = 1;
+    }
+    console.log(this.page);
     this.getCourses(this.page);
   }
 
@@ -53,12 +54,12 @@ export class CoursesComponent implements OnInit {
    * 获取指定页面的课程
    * @param {number} page 第几页
    */
-  getCourses(page: number) {
-    this.courseService.getCourses(page, 20)
+  getCourses(pag: number) {
+    this.courseService.getCourses(pag, 20)
       .subscribe((data: aa ) => {
-        this.course = data.rows;
-        this.total = data.total / 20;
         console.log(data);
+        this.course = data.rows;
+        this.total = data.total;
       });
   }
 

@@ -1,0 +1,156 @@
+.navbar-default {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: #fff;
+}
+
+.navbar-default .brand {
+    float: left;
+    padding: 30px 39px;
+    background-color: #fff;
+}
+
+.brand a{
+    font-size: 18px;
+}
+
+a {
+    color: #3287B2;
+    text-decoration: none;
+}
+
+.navbar-btn {
+    float: left;
+    padding: 16px 0;
+}
+
+.navbar-btn button {
+    font-size: 24px;
+    padding: 4px 8px;
+    line-height: .7;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.navbar-form {
+    padding: 15px;
+    border: 0;
+}
+
+.navbar-form input[type="text"] {
+    min-width: 200px;
+}
+
+.btn-primary {
+    background-color: #00AAFF;
+    border-color: #00a0f0;
+}
+
+.btn {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    padding: 6px 22px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-nav.navbar-right {
+        margin-right: 0;
+    }
+}
+
+.navbar-nav .icon-menu {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    position: relative;
+}
+
+.navbar-nav > li > a {
+    padding: 28px 20px;
+}
+
+.navbar-nav > li > a > i {
+    font-size: 22px;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.navbar-nav .icon-menu .badge {
+    position: absolute;
+    top: 22px;
+    right: 16px;
+}
+
+.bg-danger {
+    background-color: #F9354C;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    padding: 0;
+    min-width: 200px;
+}
+
+.navbar-nav > li > a > span {
+    position: relative;
+    top: 2px;
+}
+
+.navbar-nav > li > a > i.icon-submenu {
+    margin-left: 2px;
+    margin-right: 0;
+    font-size: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.navbar-nav > li > a img {
+    width: 22px;
+    margin-right: 2px;
+}
+
+.navbar-nav > li > a > span {
+    position: relative;
+    top: 2px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    padding: 0;
+    min-width: 200px;
+}
+
+.navbar-nav .dropdown-menu {
+    border-top: 2px solid #ACB0B5;
+}
+
+.navbar-nav .dropdown-menu > li > a {
+    padding: 10px 20px;
+}
+
+.dropdown-menu > li > a {
+    color: #676a6d;
+}
+
+.navbar-nav .dropdown-menu > li > a span, .navbar-nav .dropdown-menu > li > a i {
+    vertical-align: middle;
+}
+
+.dropdown-menu > li i {
+    margin-right: 6px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+#sidebar-nav, .main {
+    padding-top: 80px;
+}
+
+.offcanvas-active #wrapper .sidebar {
+    left: 0;
+}
+
+.sidebar {
+    transition: all 0.3s ease-in-out;
+    width: 260px;
+    height: 100%;
+    float: left;
+    background-color: #2B333E;
+    position: fixed;
+    left: 0;
+}
+
+.sidebar {
+    z-index: 9;
+}
+
+.layout-fullwidth .sidebar {
+    left: -260px;
+}
+
+.sidebar .nav > li > a {
+    padding: 18px 30px;
+    color: #AEB7C2;
+    border-left: 5px solid transparent;
+}
+
+.sidebar .nav i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar .nav span {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    top: -2px;
+}
+
+.sidebar .nav > li > a:hover, .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
+    color: #fff;
+    background-color: transparent;
+}
+
+.sidebar .nav > li > a:hover, .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
+    color: #fff;
+    background-color: transparent;
+}
+
+.sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
+    background-color: #252c35;
+    border-left-color: #00AAFF;
+}
