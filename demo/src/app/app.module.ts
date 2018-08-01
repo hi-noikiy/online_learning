@@ -52,9 +52,15 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AdminSiderComponent } from './admin-sider/admin-sider.component';
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
+import {CourseService} from './services/course.service';
 
 const routeConfig: Routes = [
-  {path: '', redirectTo: '/main', pathMatch: 'full'},
+  // {path: '', redirectTo: '/main', pathMatch: 'full'},
+  {path: '', component: VideoBodyComponent},
   {path: 'main', component: MainComponent, children: [
       {path: '', component: HomeComponent},
       {path: 'courses', component: CoursesComponent},
@@ -137,9 +143,13 @@ const routeConfig: Routes = [
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    QuillModule
+    QuillModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
-  providers: [SignService],
+  providers: [SignService, CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
