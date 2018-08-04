@@ -1,0 +1,89 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header_2n83q card-header">创建题目</div>
+            </div>
+            <div class="card-body">
+                <div>
+                    <h5>基本信息</h5>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="required ">难度</label>
+                            </div>
+                            <div class="col-md-4">
+                                <select name="difficulty" class="form-control">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="required ">标签</label>
+                            </div>
+                            <div class="col-md-4">
+                                <select name="difficulty" class="form-control">
+                                    <option value="1">Python</option>
+                                    <option value="2">Java</option>
+                                    <option value="3">C</option>
+                                    <option value="4">C++</option>
+                                    <option value="5">PHP</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <hr>
+                    <h5 class="required card-title">题目描述</h5>
+                    <div class="editorField_10sYW card">
+                        <div class="card-header">题目预览 - 题面描述及答案（答题者只可查看题面描述）</div>
+
+                        <div class="preview_PWlK1">
+                            <div class="ques-view">
+                                <p>这是一个单选题的样例。答案为C，分值为2分。
+                                    <span class="ques-score">(2分)</span>
+                                </p>
+                                <ol class="ques-answer ques-choice ques-list">
+                                    <li><label><input name="ques4" type="radio"> 替换为错误项</label></li>
+                                    <li><label><input name="ques4" type="radio"> 替换为错误项</label></li>
+                                    <li><label><input checked name="ques4" type="radio"> 替换为错误项</label></li>
+                                    <li><label><input name="ques4" type="radio"> 替换为错误项</label></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <h4 class="">编辑
+                            <div style="position: relative">
+                                <div class="right">
+                                    <a>
+                                        <button class="btn btn-success" type="file">上传图片<input type="file"></button>
+                                    </a>
+                                </div>
+                            </div>
+                        </h4>
+                        <div class="pta-editor">
+                            <textarea class="editor" name="raw">这是一个单选题的样例。答案为C，分值为2分。   @[C](2)
+
+A. 替换为错误项
+B. 替换为错误项
+C. 替换为正确项
+D. 替换为错误项</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttonGroup_3VuWy">
+                    <button type="button" class="btn btn-primary"> 创建</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

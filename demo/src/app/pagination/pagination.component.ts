@@ -16,8 +16,18 @@ export class PaginationComponent implements OnInit {
   @Input()
   currentPage: number;
 
+  @Input()
+  currentKindID: number;
+
   // 存储页页面索引的数组
   page: Array<any>;
+
+  /**
+   * 用阿里标记父组件的标记
+   * 1 表示父组件为 Courses
+   */
+  @Input()
+  page_status: number;
 
   constructor(private router: Router) {
   }
@@ -26,7 +36,6 @@ export class PaginationComponent implements OnInit {
    * 初始化页面索引
    */
   ngOnInit() {
-    this.total = Math.ceil(this.total / 20);
     this.page = [];
     this.getPage(this.currentPage);
   }
@@ -108,13 +117,26 @@ export class PaginationComponent implements OnInit {
     }
     this.getPage(index);
 
-    this.router.navigate(
-      ['/main/courses'],
-      {
-        queryParams: {
-          page : this.currentPage
-        }
-      });
+    if (this.page_status === 1) {
+      if (this.currentKindID === -1) {
+        this.router.navigate(
+          ['/main/courses'],
+          {
+            queryParams: {
+              page: this.currentPage
+            }
+          });
+      } else {
+        this.router.navigate(
+          ['/main/courses'],
+          {
+            queryParams: {
+              page: this.currentPage,
+              kind: this.currentKindID
+            }
+          });
+      }
+    }
   }
 
 }

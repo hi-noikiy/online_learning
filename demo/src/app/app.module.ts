@@ -61,6 +61,8 @@ import { ContestComponent } from './contest/contest.component';
 import { ContestBoxComponent } from './contest-box/contest-box.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 import { AdminContestComponent } from './admin-contest/admin-contest.component';
+import { NewProblemComponent } from './new-problem/new-problem.component';
+import { ContestProblemComponent } from './contest-problem/contest-problem.component';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -73,7 +75,8 @@ const routeConfig: Routes = [
       {path: 'paths/:path_name', component: PathContentComponent},
       {path: 'search', component: SearchComponent},
       {path: 'questions', component: QuestionsComponent},
-      {path: 'contests', component: ContestComponent}
+      {path: 'contests', component: ContestComponent},
+      {path: 'contests/:id', component: ContestProblemComponent}
     ]},
   {path: 'user/:id', component: UserComponent, children: [
       {path: '', component: UserCenterComponent, children: [
@@ -88,7 +91,11 @@ const routeConfig: Routes = [
     ]},
   {path: 'login', component: SignInComponent},
   {path: 'register', component: SignUpComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'admin', component: AdminComponent, children: [
+      {path: '', component: AdminUserComponent},
+      {path: 'contest', component: AdminContestComponent},
+      {path: 'newProblem', component: NewProblemComponent}
+    ]},
   {path: 'admin-login', component: AdminLoginComponent},
   {path: '**', component: Code404Component}
 ];
@@ -145,6 +152,8 @@ const routeConfig: Routes = [
     ContestBoxComponent,
     AdminUserComponent,
     AdminContestComponent,
+    NewProblemComponent,
+    ContestProblemComponent,
   ],
   imports: [
     BrowserModule,

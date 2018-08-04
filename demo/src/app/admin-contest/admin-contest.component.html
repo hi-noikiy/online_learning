@@ -1,3 +1,61 @@
-<p>
-  admin-contest works!
-</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">全部题集</h3>
+                    <div class="right">
+                        <a [routerLink]="['/admin/newProblem']">
+                            <button type="button" class="btn btn-success">新建题库</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>标题</th>
+                                <th>知识点</th>
+                                <th>创建者</th>
+                                <th>分数</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">763649</a></td>
+                                <td>Amber</td>
+                                <td>$62</td>
+                                <td>Oct 21, 2016</td>
+                                <td><span class="label label-warning">PENDING</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">763650</a></td>
+                                <td>Michael</td>
+                                <td>$34</td>
+                                <td>Oct 18, 2016</td>
+                                <td><span class="label label-danger">FAILED</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">763651</a></td>
+                                <td>Roger</td>
+                                <td>$186</td>
+                                <td>Oct 17, 2016</td>
+                                <td><span class="label label-success">SUCCESS</span></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">763652</a></td>
+                                <td>Smith</td>
+                                <td>$362</td>
+                                <td>Oct 16, 2016</td>
+                                <td><span class="label label-success">SUCCESS</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

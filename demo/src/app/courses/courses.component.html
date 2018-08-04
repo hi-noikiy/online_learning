@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 layout-body">
-            <div class="content">
-                <app-course-cates-title></app-course-cates-title>
+            <div class="content" *ngIf="labels">
+                <app-course-cates-title [labels]="labels" [kind_status]="statu" [currentKind]="kind"></app-course-cates-title>
             </div>
             <div class="content position-relative course-items-container">
                 <div class="row" *ngIf="course">
@@ -10,7 +10,7 @@
                 </div>
                 <!-- 分页 -->
                 <div *ngIf="total">
-                    <app-pagination [total]="total" [currentPage]="page"></app-pagination>
+                    <app-pagination [total]="total" [currentPage]="page" [page_status]="statu" [currentKindID]="kindId"></app-pagination>
                 </div>
             </div>
         </div>

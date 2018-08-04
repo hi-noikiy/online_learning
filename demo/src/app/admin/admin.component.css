@@ -1,0 +1,13 @@
+#wrapper .main {
+    padding-top: 80px;
+    transition: all 0.3s ease-in-out;
+    width: calc(100% - 260px);
+    left: 0;
+    position: relative;
+    float: right;
+    background-color: #f5f5fa;
+}
+
+.main-content {
+    padding: 28px 10px;
+}

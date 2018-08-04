@@ -12,79 +12,19 @@
 		<!--<a class="" href="#">其他技术</a>-->
 	<!--</div>-->
 <!--</div>-->
+
 <div class="row course-cates course-cates-tags">
 	<div class="col-md-1 course-cates-title">标签：</div>
 	<div class="col-md-11 course-cates-content" [class.course-tags]="course_tags">
-		<a class="active" href="#">全部</a>
-		<a class="" href=".">Python</a>
-		<a class="" href="#">Linux</a>
-		<a class="" href="#">机器学习</a>
-		<a class="" href="#">C</a>
-		<a class="" href="#">PHP</a>
-		<a class="" href="#">Java</a>
-		<a class="" href="#">Web</a>
-		<a class="" href="#">计算机专业课</a>
-		<a class="" href="#">R</a>
-		<a class="" href="#">C++</a>
-		<a class="" href="#">Spark</a>
-		<a class="" href="#">NodeJS</a>
-		<a class="" href="#">Web安全</a>
-		<a class="" href="#">Hadoop</a>
-		<a class="" href="#">网络安全</a>
-		<a class="" href="#">系统安全</a>
-		<a class="" href="#">GO</a>
-		<a class="" href="#">JavaScript</a>
-		<a class="" href="#">安全开发</a>
-		<a class="" href="#">HTML5</a>
-		<a class="" href="#">网络</a>
-		<a class="" href="#">Laravel</a>
-		<a class="" href="#">Git</a>
-		<a class="" href="#">SQL</a>
-		<a class="" href="#">Scala</a>
-		<a class="" href="#">SSH</a>
-		<a class="" href="#">OpenCV</a>
-		<a class="" href="#">Shell</a>
-		<a class="" href="#">Flask</a>
-		<a class="" href="#">MySQL</a>
-		<a class="" href="#">新手入门</a>
-		<a class="" href="#">加密解密</a>
-		<a class="" href="#">NoSQL</a>
-		<a class="" href="#">ThinkPHP</a>
-		<a class="" href="#">SDN</a>
-		<a class="" href="#">渗透测试</a>
-		<a class="" href="#">云计算</a>
-		<a class="" href="#">OpenStack</a>
-		<a class="" href="#">CSS</a>
-		<a class="" href="#">算法</a>
-		<a class="" href="#">Docker</a>
-		<a class="" href="#">设计模式</a>
-		<a class="" href="#">Redis</a>
-		<a class="" href="#">Vuejs</a>
-		<a class="" href="#">SSM</a>
-		<a class="" href="#">Kali</a>
-		<a class="" href="#">区块链</a>
-		<a class="" href="#">Ruby</a>
-		<a class="" href="#">Bootstrap</a>
-		<a class="" href="#">Nginx</a>
-		<a class="" href="#">Django</a>
-		<a class="" href="#">Spring</a>
-		<a class="" href="#">Kafka</a>
-		<a class="" href="#">ROS</a>
-		<a class="" href="#">信息隐藏</a>
-		<a class="" href="#">HTML</a>
-		<a class="" href="#">Swift</a>
-		<a class="" href="#">汇编</a>
-		<a class="" href="#">MongoDB</a>
-		<a class="" href="#">Hbase</a>
-		<a class="" href="#">爬虫</a>
-		<a class="" href="#">React</a>
-		<a class="" href="#">Ansible</a>
+        <a  (click)="changeAllKind('全部')" [class.active] = "kindActive('全部')">全部</a>
+		<a  *ngFor="let lable of labels" (click)="changeKind(lable)" [class.active] = "kindActive(lable.kname)" >{{ lable.kname }}</a>
 	</div>
 	<a class="show-more-btn" (click)="changeTags(text_tags)">
         <i class="fa fa-angle-down"></i>
         <span>{{ text_tags }}</span>
 	</a>
 </div>
+
 <!--<div class="courses-sort">-->
 	<!--<div class="courses-sort-container">-->
 		<!--<a href="#">综合</a>-->
