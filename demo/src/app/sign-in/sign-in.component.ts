@@ -34,12 +34,12 @@ export class SignInComponent implements OnInit {
 
   onSubmitTest() {
     if (this.formModel.valid) {
-      const login_name = '123@qq.com';
-      const login_pwd = '123456';
+      const login_name = this.formModel.get('username').value;
+      const login_pwd =  this.formModel.get('password').value;
       console.log([login_name, login_pwd]);
       if (login_name === '123@qq.com' && login_pwd === '123456') {
-        user.isLogin = true;
-        this.router.navigate(['../']);
+        localStorage.setItem('isLogin', '1');
+        window.history.back();
       }
     }
   }

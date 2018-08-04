@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Course} from '../class/course';
 
 @Component({
   selector: 'app-course-infobox',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseInfoboxComponent implements OnInit {
 
+  @Input()
+  course: Course;
+
+  star = 'fa fa-star-o'
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeStar() {
+    if (this.star === 'fa fa-star-o') {
+      this.star = 'fa fa-star';
+    } else {
+      this.star = 'fa fa-star-o';
+    }
   }
 
 }

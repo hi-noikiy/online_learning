@@ -9,7 +9,9 @@
                     <app-course-box [courseCss]= "courseBoxCss" [courses]="course"></app-course-box>
                 </div>
                 <!-- 分页 -->
-                <app-pagination [total]="total"></app-pagination>
+                <div *ngIf="total">
+                    <app-pagination [total]="total" [currentPage]="page"></app-pagination>
+                </div>
             </div>
         </div>
     </div>

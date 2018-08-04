@@ -22,13 +22,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isLogin = user.isLogin;
+    this.isLogin = false;
+    if (localStorage.getItem('isLogin') === '1') {
+      this.isLogin = true;
+    }
   }
 
 
   loginOut() {
     this.isLogin = false;
-    user.isLogin = this.isLogin;
+    localStorage.setItem('isLogin', '0');
   }
 
   onSubmit() {

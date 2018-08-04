@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {isNumber} from 'util';
+import {typeIsOrHasBaseType} from 'tslint/lib/language/typeUtils';
 
 @Component({
   selector: 'app-pagination',
@@ -11,7 +13,7 @@ export class PaginationComponent implements OnInit {
   @Input()
   total: number;
 
-  // 当前页面
+  @Input()
   currentPage: number;
 
   // 存储页页面索引的数组
@@ -24,23 +26,9 @@ export class PaginationComponent implements OnInit {
    * 初始化页面索引
    */
   ngOnInit() {
-    this.currentPage = 1;
-    console.log(this.total);
     this.total = Math.ceil(this.total / 20);
-    console.log(this.total);
     this.page = [];
-    if (this.total <= 13) {
-      for (let i = 1; i <= this.total; i++) {
-        this.page.push(i);
-      }
-    } else {
-      for (let i = 1; i < 6; i++) {
-        this.page.push(i);
-      }
-      this.page.push('...');
-      this.page.push(this.total - 1);
-      this.page.push(this.total);
-    }
+    this.getPage(this.currentPage);
   }
 
   /**
@@ -73,12 +61,16 @@ export class PaginationComponent implements OnInit {
       return ;
     } else if (this.total <= 13) {
       this.currentPage = index;
+      this.page = [];
+      for (let i = 1; i <= this.total; i++) {
+        this.page.push(i);
+      }
 
     } else {
       this.currentPage = index;
       this.page = [];
       if (index <= 5) {
-        for (let i = 1; i <= index + 4; i++) {
+        for (let i = 1; i <= index + 4; i = i + 1) {
           this.page.push(i);
         }
         this.page.push('...');
@@ -107,6 +99,15 @@ export class PaginationComponent implements OnInit {
 
     }
 
+  }
+
+  toPage(index: any) {
+
+    if (index === '...') {
+      return ;
+    }
+    this.getPage(index);
+
     this.router.navigate(
       ['/main/courses'],
       {
@@ -114,7 +115,6 @@ export class PaginationComponent implements OnInit {
           page : this.currentPage
         }
       });
-
   }
 
 }

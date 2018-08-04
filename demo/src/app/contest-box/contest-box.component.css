@@ -1,0 +1,81 @@
+.challenge {
+    padding: 18px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.challenge-title {
+    margin: 0 0 20px;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.contest-challenge-name, .contest-label {
+    margin-left: 10px;
+}
+
+.challenge-title span {
+    position: relative;
+    top: 2px;
+}
+
+.contest-challenge-label {
+    padding: 3px 10px;
+    font-size: 12px;
+    color: #a4a4a4;
+    background-color: #eee;
+    display: inline-block;
+    height: 20px;
+    border-radius: 20px;
+}
+
+.challenge-title span {
+    position: relative;
+    top: 2px;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.challenge-title .btn {
+    padding: 2px 10px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0c9;
+    border-color: #0c9;
+}
+
+.challenge-title .btn {
+    padding: 2px 10px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.see-title {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.challenge-meta {
+    overflow: hidden;
+}
+
+.challenge-meta a, .challenge-meta span {
+    display: inline-block;
+    margin-right: 10px;
+    color: #666;
+    font-size: 12px;
+}
+
+span.challente-meta-users {
+    color: #a4a4a4;
+}
+

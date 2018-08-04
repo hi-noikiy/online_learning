@@ -6,7 +6,9 @@
         </h4>
 		<div class="pull-right course-infobox-follow">
 			<span>关注</span>
-			<i class="fa fa-star-o" data-next=""></i>
+			<i [class]="star" (click)="changeStar()">
+
+            </i>
 		</div>
 		<div class="course-info-details">
 			<span>182703 人学过</span>

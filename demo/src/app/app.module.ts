@@ -57,9 +57,13 @@ import {VgControlsModule} from 'videogular2/controls';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
 import {CourseService} from './services/course.service';
+import { ContestComponent } from './contest/contest.component';
+import { ContestBoxComponent } from './contest-box/contest-box.component';
+import { AdminUserComponent } from './admin-user/admin-user.component';
+import { AdminContestComponent } from './admin-contest/admin-contest.component';
 
 const routeConfig: Routes = [
-  // {path: '', redirectTo: '/main', pathMatch: 'full'},
+  {path: '', redirectTo: '/main', pathMatch: 'full'},
   {path: '', component: VideoBodyComponent},
   {path: 'main', component: MainComponent, children: [
       {path: '', component: HomeComponent},
@@ -68,7 +72,8 @@ const routeConfig: Routes = [
       {path: 'paths', component: PathsComponent},
       {path: 'paths/:path_name', component: PathContentComponent},
       {path: 'search', component: SearchComponent},
-      {path: 'questions', component: QuestionsComponent}
+      {path: 'questions', component: QuestionsComponent},
+      {path: 'contests', component: ContestComponent}
     ]},
   {path: 'user/:id', component: UserComponent, children: [
       {path: '', component: UserCenterComponent, children: [
@@ -136,6 +141,10 @@ const routeConfig: Routes = [
     AdminComponent,
     AdminHeaderComponent,
     AdminSiderComponent,
+    ContestComponent,
+    ContestBoxComponent,
+    AdminUserComponent,
+    AdminContestComponent,
   ],
   imports: [
     BrowserModule,
