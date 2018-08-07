@@ -1,3 +1,150 @@
 .layout-body, .layout-side {
     padding: 0 5px;
 }
+
+.preview {
+    padding: 20px;
+    background: #fff;
+    border: solid 1px #eee;
+}
+
+.subject-title {
+    padding: 15px 20px 15px 55px;
+    background: #FFF url(//static.nowcoder.com/images/img/q-ico.png) 20px 16px no-repeat;
+    line-height: 1.5;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.subject-main {
+    background: #FFF;
+    padding: 20px;
+}
+
+.subject-main:after, .subject-main:before {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.subject-content {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.subject-question {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.subject-options {
+    margin-bottom: 20px;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    padding: 12px 20px 13px;
+    background: #FFF;
+    display: block;
+    word-break: break-all;
+}
+
+a {
+    color: #333;
+}
+
+.subject-main .checkbox, .subject-main .radio {
+    margin: 0;
+    line-height: 20px;
+}
+
+.checkbox, .radio {
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    display: inline-block;
+}
+
+.checkbox .icons, .radio .icons {
+    border: 1px solid #DDD;
+    vertical-align: -3px;
+    width: 14px;
+    height: 14px;
+    background: #FFF;
+    display: inline-block;
+    margin-right: 3px;
+    border-radius: 2px;
+    line-height: normal;
+    position: relative;
+}
+
+.radio .icons {
+    border-radius: 50%;
+}
+
+.radio input {
+    display: none;
+    outline: medium none!important;
+}
+
+button, input {
+    line-height: normal;
+}
+
+pre {
+    font-size: 14px;
+    position: relative;
+    border-left: 2px solid #1abc9c;
+    padding: 10px 0 10px 10px;
+    margin: .8em 0;
+    background: #fefefe;
+    word-break: break-word;
+}
+
+label.checkbox pre, label.radio pre {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 850px;
+}
+
+.result-answer-item pre, label.checkbox pre, label.radio pre {
+    padding: 0;
+    margin: 0;
+    background: 0 0;
+    border: none;
+}
+
+.result-answer-item pre, label.checkbox pre, label.radio pre {
+    padding: 0;
+    margin: 0;
+    background: 0 0;
+    border: none;
+}
+
+.subject-options.selected, .subject-options.selected:hover {
+    border-color: #1abc9c;
+    background: #FFF;
+}
+
+.checkbox.checked, .checkbox:hover, .radio.checked, .radio:hover {
+    color: #00bc9b;
+}
+
+.radio.checked .icons {
+    border-color: #00bc9b;
+}
+
+.radio.checked .icons:before {
+    border-radius: 50%;
+    background: #00bc9b;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+}

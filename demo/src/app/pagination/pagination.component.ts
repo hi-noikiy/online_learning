@@ -1,14 +1,12 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {isNumber} from 'util';
-import {typeIsOrHasBaseType} from 'tslint/lib/language/typeUtils';
 
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.css']
 })
-export class PaginationComponent implements OnInit {
+export class PaginationComponent implements OnInit, OnChanges {
 
   @Input()
   total: number;
@@ -21,6 +19,9 @@ export class PaginationComponent implements OnInit {
 
   // 存储页页面索引的数组
   page: Array<any>;
+
+  @Input()
+  keywords: string;
 
   /**
    * 用阿里标记父组件的标记
@@ -36,6 +37,11 @@ export class PaginationComponent implements OnInit {
    * 初始化页面索引
    */
   ngOnInit() {
+    this.page = [];
+    this.getPage(this.currentPage);
+  }
+
+  ngOnChanges() {
     this.page = [];
     this.getPage(this.currentPage);
   }
@@ -111,7 +117,6 @@ export class PaginationComponent implements OnInit {
   }
 
   toPage(index: any) {
-
     if (index === '...') {
       return ;
     }
@@ -136,6 +141,15 @@ export class PaginationComponent implements OnInit {
             }
           });
       }
+    } else if (this.page_status === 2) {
+      this.router.navigate(
+        ['/main/search'],
+        {
+          queryParams: {
+            keywords: this.keywords,
+            page: this.currentPage
+          }
+        });
     }
   }
 

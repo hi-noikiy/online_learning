@@ -3,10 +3,10 @@
  */
 
 export class Course {
-  cid: string;
+  id: number;
   cname: string;
   cdescription: string;
   curl: string;
-  kid: string;
-  uid: string;
+  kid: number;
+  uid: number;
 }

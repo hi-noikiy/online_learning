@@ -3,13 +3,14 @@
 */
 
 export class User {
-  isLogin: boolean;
   id: number;
-  name: string;
-}
+  paddress: string;
+  pcompany: string;
+  pname: string;
+  ppath: string;
+  pschool: string;
+  psex: string;
+  purl: string;
+  uid: number;
 
-export const user: User = {
-  isLogin: false,
-  id: 1,
-  name: '1'
-};
+}

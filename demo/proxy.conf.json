@@ -1,8 +1,23 @@
 {
   "/course":{
-    "target":"http://10.0.0.30:9101"
-  },
+  "target":"http://10.0.0.30:9101"
+},
   "/kind":{
     "target":"http://10.0.0.30:9101"
+  },
+  "/commentary":{
+    "target":"http://10.0.0.30:9101"
+  },
+  "/category":{
+    "target":"http://10.0.0.30:9101"
+  },
+  "/CourseSearch":{
+    "target":"http://10.0.0.30:9106"
+  },
+  "/personal":{
+    "target":"http://10.0.0.30:9102"
+  },
+  "/group1":{
+    "target":"http://10.0.0.30:1234"
   }
 }

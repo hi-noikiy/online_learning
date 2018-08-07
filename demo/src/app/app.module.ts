@@ -63,6 +63,7 @@ import { AdminUserComponent } from './admin-user/admin-user.component';
 import { AdminContestComponent } from './admin-contest/admin-contest.component';
 import { NewProblemComponent } from './new-problem/new-problem.component';
 import { ContestProblemComponent } from './contest-problem/contest-problem.component';
+import { HtmlPipe } from './pipe/html.pipe';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -154,6 +155,7 @@ const routeConfig: Routes = [
     AdminContestComponent,
     NewProblemComponent,
     ContestProblemComponent,
+    HtmlPipe,
   ],
   imports: [
     BrowserModule,

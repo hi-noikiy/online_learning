@@ -1,2 +1,4 @@
 <app-home-carousel></app-home-carousel>
-<app-home-handpick-course></app-home-handpick-course>
+<div *ngIf="courses">
+    <app-home-handpick-course [courses]="courses"></app-home-handpick-course>
+</div>

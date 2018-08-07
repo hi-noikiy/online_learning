@@ -3,34 +3,36 @@
 		<li role="presentation" class="active">
 			<a href="#comments" class="stat-event" aria-controls="comments" role="tab" data-stat="course_comment" data-toggle="tab">课程评论(7796)</a>
 		</li>
-		<li role="presentation">
-			<a href="#reports" class="stat-event" data-stat="course_report" aria-controls="reports" role="tab" data-toggle="tab">实验报告(18347)</a>
-		</li>
-		<li role="presentation">
-			<a href="#questions" class="stat-event" data-stat="course_question" aria-controls="questions" role="tab" data-toggle="tab">实验问答  (2494)</a>
-		</li>
+		<!--<li role="presentation">-->
+			<!--<a href="#reports" class="stat-event" data-stat="course_report" aria-controls="reports" role="tab" data-toggle="tab">实验报告(18347)</a>-->
+		<!--</li>-->
+		<!--<li role="presentation">-->
+			<!--<a href="#questions" class="stat-event" data-stat="course_question" aria-controls="questions" role="tab" data-toggle="tab">实验问答  (2494)</a>-->
+		<!--</li>-->
 	</ul>
 
 	<div class="tab-content">
-		<div class="tab-pane course-comment active" role="tabpanel" id="comments">
-			<div class="comment-box">
-				<div class="comment-form">
-					<textarea class="comment-form-content" placeholder="输入您想说的话..."></textarea>
-					<button class="pull-right btn btn-primary comment-form-add">发表评论</button>
-				</div>
+        <div class="tab-pane course-comment active" role="tabpanel" id="comments">
+            <div class="comment-box">
+                <div class="comment-form">
+                    <textarea class="comment-form-content" placeholder="输入您想说的话..."></textarea>
+                    <button class="pull-right btn btn-primary comment-form-add">发表评论</button>
+                </div>
 
-				<div class="comment-title">最新评论</div>
+                <div class="comment-title">最新评论</div>
 
-                <app-comment-box></app-comment-box>
-				<app-pagination></app-pagination>
-			</div>
-		</div>
-		<div class="tab-pane" role="tabpanel" id="reports"></div>
-		<div class="tab-pane" role="tabpanel" id="questions">
-			<a class="btn btn-success" data-toggle="modal" href="#askquestion">我要提问</a>
-			<hr>
-			<app-questions-box></app-questions-box>
-			<app-pagination></app-pagination>
-		</div>
+                <div *ngIf="users">
+                    <app-comment-box [comments]="comments" [users]="users"></app-comment-box>
+                </div>
+                <app-pagination></app-pagination>
+            </div>
+        </div>
+		<!--<div class="tab-pane" role="tabpanel" id="reports"></div>-->
+		<!--<div class="tab-pane" role="tabpanel" id="questions">-->
+			<!--<a class="btn btn-success" data-toggle="modal" href="#askquestion">我要提问</a>-->
+			<!--<hr>-->
+			<!--<app-questions-box></app-questions-box>-->
+			<!--<app-pagination></app-pagination>-->
+		<!--</div>-->
 	</div>
 </div>

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="search-info">
-        <h4><span>"python"</span>的搜索结果</h4>
+        <h4><span>"{{ keyWords }}"</span>的搜索结果</h4>
     </div>
 
     <div class=row>
@@ -8,16 +8,18 @@
             <div class="content clearfix">
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active">
-                        <a href="#course-result" aria-controls="course-result" role="tab" data-toggle="tab">课程  ( 99 ) </a>
+                        <a href="#course-result" aria-controls="course-result" role="tab" data-toggle="tab">课程  ( {{total}} ) </a>
                     </li>
-                    <li role="presentation">
-                        <a href="#question-result" aria-controls="question-result" role="tab" data-toggle="tab">问答 ( 3740 ) </a>
-                    </li>
+                    <!--<li role="presentation">-->
+                        <!--<a href="#question-result" aria-controls="question-result" role="tab" data-toggle="tab">问答 ( 3740 ) </a>-->
+                    <!--</li>-->
                 </ul>
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="course-result">
-                        <app-course-box></app-course-box>
-                        <app-pagination></app-pagination>
+                        <app-course-box [courses]="courses"></app-course-box>
+                        <div *ngIf="page">
+                            <app-pagination [total]="totalPages" [currentPage]="page" [page_status]="2" [keywords]="keyWords"></app-pagination>
+                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane active" id="question-result">
                         
@@ -28,7 +30,7 @@
 
         <div class="col-md-3 layout-side">
             <div class="side-image side-image-vip">
-                <a href="/vip" target="_blank">
+                <a>
                     <img src="https://static.shiyanlou.com/img/banner-vip.png">
                 </a>
             </div>

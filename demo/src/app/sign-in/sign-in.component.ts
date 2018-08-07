@@ -3,7 +3,6 @@ import {SignService} from '../services/sign.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {emailValidator} from '../validators/validators';
 import {Router} from '@angular/router';
-import {user} from '../class/user';
 
 @Component({
   selector: 'app-sign-in',

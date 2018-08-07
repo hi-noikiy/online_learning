@@ -80,12 +80,12 @@
                 </li>
             </ul>
 
-            <form [formGroup]="forModel" class="navbar-form navbar-right" (submit)="onSubmit()">
+            <form [formGroup]="forModel" class="navbar-form navbar-right" (submit)="onSubmitSearch()">
                 <div  class="form-group">
                     <label>
-                        <i class="fa fa-search" (click)="onSubmit()"></i>
+                        <i class="fa fa-search" (click)="onSubmitSearch()"></i>
                     </label>
-                    <input type="text" class="form-control" placeholder="搜索 课程/问答" formControlName="search">
+                    <input type="text" class="form-control" placeholder="搜索 课程" formControlName="search">
                 </div>
             </form>
 

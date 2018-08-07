@@ -11,7 +11,7 @@ export class CourseInfoboxComponent implements OnInit {
   @Input()
   course: Course;
 
-  star = 'fa fa-star-o'
+  star = 'fa fa-star-o';
 
   constructor() { }
 

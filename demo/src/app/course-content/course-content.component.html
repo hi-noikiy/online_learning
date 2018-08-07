@@ -1,14 +1,16 @@
 <div class="container">
-    <app-course-path></app-course-path>
-    <div class="row">
+    <!--<app-course-path></app-course-path>-->
+    <div class="row" *ngIf="course">
         <div class="col-md-9 layout-body">
-            <app-course-infobox></app-course-infobox>
-            <app-course-chapter></app-course-chapter>
-            <app-comment></app-comment>
+            <app-course-infobox [course]="course"></app-course-infobox>
+            <app-course-chapter [course]="course" [chapters]="chapters"></app-course-chapter>
+            <div *ngIf="comments">
+                <app-comment [comments]="comments"></app-comment>
+            </div>
         </div>
         <div class="col-md-3 layout-side">
             <div class="side-image side-image-pc">
-                <img src="https://dn-simplecloud.shiyanlou.com/ncn1.jpg?imageView2/0/h/300">
+                <img src="{{ course.curl }}">
             </div>
             <app-course-teacher></app-course-teacher>
         </div>

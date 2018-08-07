@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="header_2n83q card-header">创建题目</div>
             </div>
-            <div class="card-body">
+            <div class="card-body" [formGroup]="problemForm">
                 <div>
                     <h5>基本信息</h5>
                     <div class="form-group">
@@ -13,7 +13,7 @@
                                 <label class="required ">难度</label>
                             </div>
                             <div class="col-md-4">
-                                <select name="difficulty" class="form-control">
+                                <select class="form-control" formControlName="hard">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -26,10 +26,10 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-2">
-                                <label class="required ">标签</label>
+                                <label class="required">标签</label>
                             </div>
                             <div class="col-md-4">
-                                <select name="difficulty" class="form-control">
+                                <select class="form-control" formControlName="label">
                                     <option value="1">Python</option>
                                     <option value="2">Java</option>
                                     <option value="3">C</option>
@@ -70,18 +70,15 @@
                             </div>
                         </h4>
                         <div class="pta-editor">
-                            <textarea class="editor" name="raw">这是一个单选题的样例。答案为C，分值为2分。   @[C](2)
+                            <textarea class="editor" name="raw" formControlName="text">
 
-A. 替换为错误项
-B. 替换为错误项
-C. 替换为正确项
-D. 替换为错误项</textarea>
+                            </textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="buttonGroup_3VuWy">
-                    <button type="button" class="btn btn-primary"> 创建</button>
+                    <button type="submit" class="btn btn-primary"> 创建 </button>
                 </div>
             </div>
         </div>

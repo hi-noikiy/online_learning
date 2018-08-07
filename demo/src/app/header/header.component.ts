@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {user} from '../class/user';
-import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
@@ -34,9 +33,13 @@ export class HeaderComponent implements OnInit {
     localStorage.setItem('isLogin', '0');
   }
 
-  onSubmit() {
+  onSubmitSearch() {
     if (this.forModel.get('search').value !== '') {
-      this.router.navigate(['/main/search']);
+      this.router.navigate(['/main/search'], {
+        queryParams: {
+          keywords: this.forModel.get('search').value
+        }
+      });
     }
   }
 

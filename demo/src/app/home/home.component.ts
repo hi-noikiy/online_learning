@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {CourseService} from '../services/course.service';
+import {Course} from '../class/course';
+import {aa} from '../class/aa';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  // 课程数组
+  courses: Course[];
 
-  ngOnInit() {
+  constructor(private courseService: CourseService ) {
   }
 
+  ngOnInit() {
+    this.getCourse();
+  }
+
+  getCourse() {
+    this.courseService.getCourses(4, 20)
+      .subscribe((data: aa ) => {
+        this.courses = data.rows;
+      });
+  }
 }

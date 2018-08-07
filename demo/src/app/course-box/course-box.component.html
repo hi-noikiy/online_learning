@@ -1,12 +1,12 @@
 <div *ngIf="courses">
     <div *ngFor="let course of courses" [class]="courseCss">
-        <a class="course-box center-block" [routerLink]="['/main/courses', course.cid]">
+        <a class="course-box center-block" [routerLink]="['/main/courses', course.id]">
             <div class="course-img">
                 <img alt="{{ course.cname}}" src="{{ course.curl }}">
             </div>
             <div class="course-body">
-                <div class="course-name">{{ course.cname }}</div>
-                <div class="course-desc">{{ course.cdescription }}</div>
+                <div [innerHtml]="course.cname | html" class="course-name"></div>
+                <div [innerHTML]="course.cdescription | html" class="course-desc"></div>
                 <div class="course-footer">
                     <span class="course-per-num pull-left">
                         <i class="fa fa-users"></i>

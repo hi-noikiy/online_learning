@@ -3,6 +3,8 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {aa} from '../class/aa';
 import {Kind} from '../class/kind';
+import {Course} from '../class/course';
+import {Chapter} from '../class/Chapter';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +15,32 @@ export class CourseService {
 
   constructor(private httpClient: HttpClient) {
     this.http = httpClient;
+  }
+
+  /**
+   * 根据课程的id获取课程内容
+   * @param {number} id 课程的id
+   */
+  getCourse(id: number) {
+    return this.http.get<Course>('/course/findOne.do?id=' + id);
+  }
+
+  /**
+   * 获取课程的章节
+   * @param {number} id 课程的id
+   * @returns {Observable<Object>}
+   */
+  getChapter(id: number) {
+    return this.http.get<Chapter[]>('/category/findByParentId.do?cid=' + id);
+  }
+
+  /**
+   * 获取课程的评论
+   * @param {number} id 课程的id
+   * @returns {Observable<Object>}
+   */
+  getComment(id: number) {
+    return this.http.get('/commentary/findByCourseId.do?id=' + id);
   }
 
   /**
