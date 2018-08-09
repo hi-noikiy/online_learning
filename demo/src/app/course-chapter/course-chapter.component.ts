@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Course} from '../class/course';
 import {Chapter} from '../class/Chapter';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-course-chapter',
@@ -15,9 +16,19 @@ export class CourseChapterComponent implements OnInit {
   @Input()
   chapters: Chapter[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+
+  getVideo(chapter: Chapter) {
+    this.router.navigate(
+      ['/video'],
+      {
+        queryParams: {
+          chapterId: chapter.id
+        }
+      });
+  }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SignService} from '../services/sign.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {emailValidator} from '../validators/validators';
 import {Router} from '@angular/router';
 
 @Component({
@@ -23,7 +22,7 @@ export class SignInComponent implements OnInit {
     this.login = signService;
 
     this.formModel = fb.group({
-      username: ['', [Validators.required, emailValidator]],
+      username: ['', [Validators.required]],
       password: ['', [Validators.required]]
     });
   }
@@ -33,9 +32,9 @@ export class SignInComponent implements OnInit {
 
   onSubmitTest() {
     if (this.formModel.valid) {
+      console.log(this.formModel.value);
       const login_name = this.formModel.get('username').value;
       const login_pwd =  this.formModel.get('password').value;
-      console.log([login_name, login_pwd]);
       if (login_name === '123@qq.com' && login_pwd === '123456') {
         localStorage.setItem('isLogin', '1');
         window.history.back();
@@ -46,26 +45,16 @@ export class SignInComponent implements OnInit {
   onSubmit() {
     // 当表单所有匹配规则都符合时,才提交
     if (this.formModel.valid) {
-      this.signService.login(this.formModel.value)
-        .subscribe(data => {
-          console.log(data);
-          if (data['status'] === true) {
-            this.router.navigate(['/main']);
-          } else {
-            this.password_error = '账户或密码错误';
-          }
-        });
+      const login_name = this.formModel.get('username').value;
+      const login_pwd =  this.formModel.get('password').value;
+      this.signService.login(login_name, login_pwd);
     }
   }
 
   emailError() {
     if (!(this.formModel.get('username').valid || this.formModel.get('username').untouched)) {
       if (this.formModel.hasError('required', ['username'])) {
-        this.email_error = '邮箱不能为空!';
-        return false;
-      }
-      if (this.formModel.hasError('my_email', ['username'])) {
-        this.email_error = '邮箱格式不正确!';
+        this.email_error = '用户不能为空!';
         return false;
       }
     }

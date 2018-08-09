@@ -1,7 +1,7 @@
 <div class="content">
 	<ul class="nav nav-tabs" role="tablist">
 		<li role="presentation" class="active">
-			<a href="#comments" class="stat-event" aria-controls="comments" role="tab" data-stat="course_comment" data-toggle="tab">课程评论(7796)</a>
+			<a href="#comments" class="stat-event" aria-controls="comments" role="tab" data-stat="course_comment" data-toggle="tab">课程评论({{ comments.length }})</a>
 		</li>
 		<!--<li role="presentation">-->
 			<!--<a href="#reports" class="stat-event" data-stat="course_report" aria-controls="reports" role="tab" data-toggle="tab">实验报告(18347)</a>-->
@@ -21,7 +21,7 @@
 
                 <div class="comment-title">最新评论</div>
 
-                <div *ngIf="users">
+                <div *ngIf="users.length >= 1">
                     <app-comment-box [comments]="comments" [users]="users"></app-comment-box>
                 </div>
                 <app-pagination></app-pagination>

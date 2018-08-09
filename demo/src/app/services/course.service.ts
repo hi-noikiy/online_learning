@@ -65,4 +65,13 @@ export class CourseService {
     return this.http.get<Kind[]>('/kind/findAll.do');
   }
 
+  /**
+   * 获取视频信息
+   * @param {number} chapterId 视频所在章节的章节 ip
+   * @returns {Observable<Object>}
+   */
+  getVideo(chapterId: number) {
+    return this.http.get('vidio/findByCategoryId.do?id=' + chapterId);
+  }
+
 }

@@ -55,9 +55,14 @@ a {
     color: #333;
 }
 
-.subject-main .checkbox, .subject-main .radio {
-    margin: 0;
-    line-height: 20px;
+a:hover {
+    color: #25bb9b;
+}
+
+.subject-options:hover {
+    background: #F3F3F3;
+    text-decoration: none;
+    border-color: #909090;
 }
 
 .checkbox, .radio {
@@ -65,6 +70,15 @@ a {
     font-size: 14px;
     text-align: left;
     display: inline-block;
+}
+
+.checkbox.checked, .checkbox:hover, .radio.checked, .radio:hover {
+    color: #00bc9b;
+}
+
+.subject-main .checkbox, .subject-main .radio {
+    margin: 0;
+    line-height: 20px;
 }
 
 .checkbox .icons, .radio .icons {
@@ -84,13 +98,30 @@ a {
     border-radius: 50%;
 }
 
-.radio input {
-    display: none;
-    outline: medium none!important;
+.checkbox:hover .icons, .radio:hover .icons {
+    border-color: #00bc9b;
+}
+
+article, aside, blockquote, body, button, code, dd, details, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+button, input, optgroup, option, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
 }
 
 button, input {
     line-height: normal;
+}
+
+.checkbox input, .radio input {
+    display: none;
+    outline: medium none!important;
 }
 
 pre {
@@ -103,33 +134,28 @@ pre {
     word-break: break-word;
 }
 
+code, pre {
+    font-family: Courier,'Courier New',monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.result-answer-item pre, label.checkbox pre, label.radio pre {
+    padding: 0;
+    margin: 0;
+    background: 0 0;
+    border: none;
+}
+
 label.checkbox pre, label.radio pre {
     display: inline-block;
     vertical-align: top;
     max-width: 850px;
 }
 
-.result-answer-item pre, label.checkbox pre, label.radio pre {
-    padding: 0;
-    margin: 0;
-    background: 0 0;
-    border: none;
-}
-
-.result-answer-item pre, label.checkbox pre, label.radio pre {
-    padding: 0;
-    margin: 0;
-    background: 0 0;
-    border: none;
-}
-
 .subject-options.selected, .subject-options.selected:hover {
     border-color: #1abc9c;
     background: #FFF;
-}
-
-.checkbox.checked, .checkbox:hover, .radio.checked, .radio:hover {
-    color: #00bc9b;
 }
 
 .radio.checked .icons {
@@ -145,6 +171,45 @@ label.checkbox pre, label.radio pre {
     vertical-align: middle;
     content: "";
     position: absolute;
-    left: 3px;
-    top: 3px;
+    left: 2px;
+    top: 2px;
+}
+
+
+.subject-action {
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.clearfix:after, .clearfix:before {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.subject-action .subject-next {
+    float: right;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    width: 110px;
+    color: #FFF;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none 0;
+    cursor: pointer;
+    line-height: normal;
+    outline: 0;
+    white-space: nowrap;
 }

@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" *ngIf="chapters">
 	<ul class="nav nav-tabs" role="tablist">
 		<li role="presentation" class="active">
 			<a href="#labs" aria-controls="labs" role="tab" data-toggle="tab">章节列表</a>
@@ -15,7 +15,7 @@
 					<div class="lab-item-index">实验{{ chapter.id }}</div>
 					<div class="lab-item-title" title="Linux 系统简介">{{ chapter.cname }}</div>
 					<div class="pull-right lab-item-ctrl">
-						<a class="btn btn-primary lab-item-start"href="#">
+						<a class="btn btn-primary lab-item-start" (click)="getVideo(chapter)">
                         开始学习
                         </a>
 					</div>

@@ -1,0 +1,25 @@
+.layout-body, .layout-side {
+    padding: 0 5px;
+}
+
+.content {
+    margin-bottom: 10px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #0c9;
+    border-color: #0c9;
+}
+
+.pass input{
+    position: relative;
+    opacity: 0;
+    width: 72px;
+    height: 0;
+    top: -23px;
+
+}

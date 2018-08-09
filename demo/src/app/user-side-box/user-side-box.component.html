@@ -1,34 +1,21 @@
-<div class="sidebox">
-	<table class="sidebox-table-labinfo">
-		<tbody>
-			<tr>
-				<td>
-					<img class="td-img" src="https://static.shiyanlou.com/img/user/icon_level.png" alt="">
-				</td>
-				<td>
-					<span class="info-text">当前等级
-                        <span style="color:#EE6723"> 6 </span> 级
-                    </span>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<img class="td-img" src="https://static.shiyanlou.com/img/user/icon_time.png" alt="实验时间">
-				</td>
-				<td>
-					<span class="info-text">有效学习时间 174 分钟</span>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<img class="td-img" src="https://static.shiyanlou.com/img/user/icon_bean.png" alt="实验豆">
-				</td>
-				<td>
-					<span class="info-text">剩余
-                        <span style="color:#EE6723"> 6 </span> 颗 学习豆
-                    </span>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+<div class="sidebox ">
+        <div class="row">
+            <div class="col-md-12">
+                <a [routerLink]="['./createCourse']">
+                    <button class="btn btn-block btn-success ">创建课程</button>
+                </a>
+            </div>
+
+            <div class="col-md-12">
+                <a [routerLink]="['./']">
+                    <button class="btn btn-block btn-info ">生成试卷</button>
+                </a>
+            </div>
+
+            <div class="col-md-12">
+                <a [routerLink]="['./createContest']">
+                    <button class="btn btn-block btn-warning ">添加题目</button>
+                </a>
+            </div>
+        </div>
 </div>

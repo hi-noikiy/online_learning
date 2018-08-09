@@ -25,14 +25,13 @@ export class CourseContentComponent implements OnInit {
   // 评论
   comments: Comment[];
 
-  constructor(private route: ActivatedRoute, private courseService: CourseService, private userService: UserService) { }
+  constructor(private route: ActivatedRoute, private courseService: CourseService) { }
 
   ngOnInit() {
     this.courseId = +this.route.snapshot.paramMap.get('id');
-    this.getCourse(this.courseId);
     this.getChapter(this.courseId);
+    this.getCourse(this.courseId);
     this.getComment(this.courseId);
-    // this.getUsers();
   }
 
   /**
@@ -43,6 +42,7 @@ export class CourseContentComponent implements OnInit {
     this.courseService.getCourse(id)
       .subscribe((data: Course) => {
         this.course = data;
+        console.log(data);
       });
   }
 

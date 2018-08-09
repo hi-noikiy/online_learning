@@ -64,10 +64,12 @@ import { AdminContestComponent } from './admin-contest/admin-contest.component';
 import { NewProblemComponent } from './new-problem/new-problem.component';
 import { ContestProblemComponent } from './contest-problem/contest-problem.component';
 import { HtmlPipe } from './pipe/html.pipe';
+import { UserCreateCourseComponent } from './user-create-course/user-create-course.component';
+import { UserCreateContestComponent } from './user-create-contest/user-create-contest.component';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
-  {path: '', component: VideoBodyComponent},
+  {path: 'video', component: VideoBodyComponent},
   {path: 'main', component: MainComponent, children: [
       {path: '', component: HomeComponent},
       {path: 'courses', component: CoursesComponent},
@@ -77,13 +79,15 @@ const routeConfig: Routes = [
       {path: 'search', component: SearchComponent},
       {path: 'questions', component: QuestionsComponent},
       {path: 'contests', component: ContestComponent},
-      {path: 'contests/:id', component: ContestProblemComponent}
+      {path: 'contests/:id', component: ContestProblemComponent},
     ]},
   {path: 'user/:id', component: UserComponent, children: [
       {path: '', component: UserCenterComponent, children: [
           {path: '', component: UserLearnedCoursesComponent},
           {path: 'follow', component: UserCenterFollowComponent},
         ]},
+      {path: 'createCourse', component: UserCreateCourseComponent},
+      {path: 'createContest', component: UserCreateContestComponent},
       {path: 'info', component: UserInfoComponent, children: [
           {path: '', component: UserProfileComponent},
           {path: 'account', component: UserAccountComponent}
@@ -156,6 +160,8 @@ const routeConfig: Routes = [
     NewProblemComponent,
     ContestProblemComponent,
     HtmlPipe,
+    UserCreateCourseComponent,
+    UserCreateContestComponent,
   ],
   imports: [
     BrowserModule,

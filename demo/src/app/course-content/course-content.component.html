@@ -1,9 +1,11 @@
 <div class="container">
     <!--<app-course-path></app-course-path>-->
-    <div class="row" *ngIf="course">
-        <div class="col-md-9 layout-body">
+    <div class="row">
+        <div class="col-md-9 layout-body" *ngIf="course">
             <app-course-infobox [course]="course"></app-course-infobox>
-            <app-course-chapter [course]="course" [chapters]="chapters"></app-course-chapter>
+            <div *ngIf="chapters.length >= 1">
+                <app-course-chapter [course]="course" [chapters]="chapters"></app-course-chapter>
+            </div>
             <div *ngIf="comments">
                 <app-comment [comments]="comments"></app-comment>
             </div>
