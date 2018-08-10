@@ -12,19 +12,28 @@
     "target":"http://10.0.0.30:9101"
   },
   "/CourseSearch":{
-    "target":"http://10.0.0.30:9106"
+    "target":"http://10.0.0.30:9109"
   },
   "/personal":{
     "target":"http://10.0.0.30:9102"
   },
   "/group1":{
-    "target":"http://10.0.0.30:1234"
+    "target":"http://10.0.0.30:14785"
   },
   "/cas":{
     "target":"http://119.29.56.187:80"
   },
   "/vidio":{
     "target":"http://10.0.0.30:9104"
+  },
+  "/problem":{
+    "target":"http://10.0.0.30:9107"
+  },
+  "/usertestrecord":{
+    "target":"http://10.0.0.30:9107"
+  },
+  "/user":{
+    "target":"http://10.0.0.30:9102"
   }
 
 }

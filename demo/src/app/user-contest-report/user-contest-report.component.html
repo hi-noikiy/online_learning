@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="nk-main analytic-page clearfix">
+                <div class="menu-box">
+                    <ul class="menu clearfix">
+                        <li class="selected">
+                            <a>评估报告</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="review-report">
+                    <div class="graph-box clearfix">
+                        <div class="graph-info">
+                            <div class="graph-statistic">
+                                <span class="graph-score">得分：{{ grade }}</span>
+                            </div>
+                            <div class="content-item-order graph-detail">
+                                <p><span class="item-label">试卷：</span>
+                                    测试一<span class="stars star-3" title="难度系数"></span>
+                                </p>
+                                <p>
+                                    <span class="item-label">正确题数：</span>
+                                    {{ grade / 10 }}/10
+                                </p>
+                                <p>
+                                    <span class="item-label">得分：</span>
+                                    {{ grade }}</p>
+                                <p>
+                                    <span class="item-label">用时：</span>
+                                    00:00:00</p>
+                                <p>
+                                    <a class="btn btn-primary js-log-clock nc-req-auth">今日打卡</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="ability-map">
+                            <div class="ability-map-head clearfix">
+                                <h4>你的技能图谱</h4>
+                            </div>
+                        </div>
+                        <div class="ability-body">
+                            <div echarts [options]="option" style="left: 490px;top: -279px; height: 350px; width: 420px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

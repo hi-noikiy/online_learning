@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder,  FormGroup, Validators} from '@angular/forms';
 import {emailValidator, equalVaidator} from '../validators/validators';
+import {SignService} from '../services/sign.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -15,9 +16,16 @@ export class SignUpComponent implements OnInit {
 
   formModel: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  status: number;
+
+  imgurl: string;
+
+  imgHidden: boolean;
+
+  constructor(fb: FormBuilder, private signService: SignService) {
     this.formModel = fb.group({
-      username: ['', [Validators.required, emailValidator]],
+      username: ['', [Validators.required]],
+      code: ['', [Validators.required]],
       passwordsGroup: fb.group({
         password1: ['', [Validators.required]],
         password2: ['', ]
@@ -26,22 +34,42 @@ export class SignUpComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.status = 0;
+    this.imgHidden = true;
   }
 
   onSubmit() {
     if (this.formModel.valid) {
-      console.log(this.formModel.value);
+      this.signService.register(this.formModel.get('username').value,
+        this.formModel.get('passwordsGroup').get('password1').value,
+        this.formModel.get('code').value)
+        .subscribe(data => {
+          console.log(data);
+        });
+    }
+  }
+
+  sendCode(stat: number) {
+
+    if (stat === 0) {
+      this.signService.getQRcode(this.formModel.get('username').value)
+        .subscribe((data: any) => {
+         this.imgurl = data.massage;
+         this.imgHidden = false;
+         this.status += 1;
+        });
+    } else if (stat === 1) {
+      this.signService.sendCode(this.formModel.get('username').value)
+        .subscribe(data => {
+          console.log(data);
+        });
     }
   }
 
   emailError() {
     if (!(this.formModel.get('username').valid || this.formModel.get('username').untouched)) {
       if (this.formModel.hasError('required', ['username'])) {
-        this.email_error = '邮箱不能为空!';
-        return false;
-      }
-      if (this.formModel.hasError('my_email', ['username'])) {
-        this.email_error = '邮箱格式不正确!';
+        this.email_error = '账号不能为空!';
         return false;
       }
     }

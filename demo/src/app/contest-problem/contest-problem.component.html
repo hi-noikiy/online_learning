@@ -1,44 +1,22 @@
-<div class="container">
+<div class="container" *ngIf="problems">
     <div class="row">
         <div class="col-md-9 layout-body">
             <div class="subject-title">[单选题]</div>
             <div class="subject-main">
-                <div class="subject-content">
+                <div *ngFor="let problem of problems; let i = index" class="subject-content">
                     <div class="subject-question">
-                        下列哪种不是Python元组的定义方式？ <br>
+                        {{ problem.question }}(10 分) <br>
                     </div>
-                    <a class="subject-options">
-                        <label class="radio">
+                    <a class="subject-options" [class.selected]="false"  *ngFor="let a of x" (click)="change(i, a)">
+                        <label class="radio" [class.checked]="theSame(a, c[i], problem.answer | demoNumber)">
                             <span class="icons"></span>
-                            <input type="radio" checked="checked">
-                            <pre>(1)</pre>
-                        </label>
-                    </a>
-                    <a class="subject-options selected">
-                        <label class="radio checked">
-                            <span class="icons"></span>
-                            <input type="radio" checked="checked">
-                            <pre>(1, )</pre>
-                        </label>
-                    </a>
-                    <a class="subject-options">
-                        <label class="radio">
-                            <span class="icons"></span>
-                            <input type="radio" checked="checked">
-                            <pre>(1, 2)</pre>
-                        </label>
-                    </a>
-                    <a class="subject-options">
-                        <label class="radio">
-                            <span class="icons"></span>
-                            <input type="radio" checked="checked">
-                            <pre>(1 ,2, (3, 4))</pre>
+                            <pre>{{ problem.choice[a] }}</pre>
                         </label>
                     </a>
                 </div>
 
                 <div class="subject-action">
-                    <button type="submit" class="btn btn-success">提交</button>
+                    <button (click)="getGrade()" type="submit" class="btn btn-success">提交</button>
                 </div>
 
             </div>

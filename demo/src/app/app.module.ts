@@ -66,6 +66,9 @@ import { ContestProblemComponent } from './contest-problem/contest-problem.compo
 import { HtmlPipe } from './pipe/html.pipe';
 import { UserCreateCourseComponent } from './user-create-course/user-create-course.component';
 import { UserCreateContestComponent } from './user-create-contest/user-create-contest.component';
+import { UserContestResultComponent } from './user-contest-result/user-contest-result.component';
+import { UserContestReportComponent } from './user-contest-report/user-contest-report.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
@@ -80,6 +83,7 @@ const routeConfig: Routes = [
       {path: 'questions', component: QuestionsComponent},
       {path: 'contests', component: ContestComponent},
       {path: 'contests/:id', component: ContestProblemComponent},
+      {path: 'report', component: UserContestReportComponent}
     ]},
   {path: 'user/:id', component: UserComponent, children: [
       {path: '', component: UserCenterComponent, children: [
@@ -162,6 +166,8 @@ const routeConfig: Routes = [
     HtmlPipe,
     UserCreateCourseComponent,
     UserCreateContestComponent,
+    UserContestResultComponent,
+    UserContestReportComponent,
   ],
   imports: [
     BrowserModule,
@@ -173,7 +179,8 @@ const routeConfig: Routes = [
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    NgxEchartsModule
   ],
   providers: [SignService, CourseService],
   bootstrap: [AppComponent]

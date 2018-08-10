@@ -1,0 +1,158 @@
+.nk-main {
+    margin: 0 auto;
+    width: 960px;
+    padding-top: 40px;
+    padding-bottom: 250px;
+}
+
+.with-validate .nk-main, .with-validate .search-outside {
+    padding-top: 100px;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.menu-box {
+    background: #FFF;
+    border-bottom: 2px solid #00bc9b;
+    border-top: none;
+    float: left;
+    width: 100%;
+}
+
+.menu, .menu-txt {
+    float: left;
+    letter-spacing: -4px;
+    white-space: nowrap;
+}
+
+.menu li.selected, .menu li.selected .sub-menu, .menu li.selected a, .menu li.selected a:hover {
+    background: #00bc9b;
+    color: #FFF;
+}
+
+.menu li, .menu-txt li {
+    letter-spacing: 0;
+    display: inline-block;
+    margin-right: 1px;
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 0 20px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    white-space: nowrap;
+}
+
+article, aside, blockquote, body, button, code, dd, details, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.review-report {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+
+.graph-box {
+    padding: 70px 0;
+}
+
+.graph-info {
+    width: 450px;
+    padding-left: 30px;
+    float: left;
+    border-right: 1px solid #ddd;
+}
+
+.graph-statistic {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.graph-score {
+    background-position: 0 -169px;
+}
+
+.graph-rank, .graph-result, .graph-score {
+    background: url(http://static.nowcoder.com/images/img/icons/ico-report.png) no-repeat;
+    padding-left: 30px;
+    color: #888;
+    height: 28px;
+    line-height: 36px;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.graph-detail {
+    float: none;
+    width: 425px;
+    font-size: 16px;
+    color: #34495e;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+.graph-detail p {
+    font-weight: 700;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.graph-detail .item-label {
+    font-size: 16px;
+    width: auto;
+    text-align: left;
+}
+
+.btn-primary {
+    background: #00BC9B;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    width: 110px;
+    color: #FFF;
+    font-size: 14px;
+    border-radius: 3px;
+    border: none 0;
+    cursor: pointer;
+    line-height: normal;
+    outline: 0;
+    white-space: nowrap;
+}
+
+.ability-map {
+    width: 430px;
+    float: left;
+    padding: 0 20px;
+}
+
+.ability-map-head {
+    margin-bottom: 20px;
+}
+
+.ability-map-head h4 {
+    float: left;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #888;
+}
+
+
+
+
+
+

@@ -12,11 +12,11 @@ const httpOptions = {
   })
 };
 
-const http_options = {
-  headers: new HttpHeaders({
-    'Access-Control-Allow-Origin': '*',
-  })
-};
+// const http_options = {
+//   headers: new HttpHeaders({
+//     'Access-Control-Allow-Origin': '*',
+//   })
+// };
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +29,28 @@ export class SignService {
     this.http = httpClient;
   }
 
+  /**
+   * 获取验证码
+   * @param {string} phone
+   * @returns {Observable<Object>}
+   */
+  sendCode(phone: string) {
+    console.log(phone);
+    return this.http.post('/user/sendCode.do', phone);
+  }
+
+  register(username: string, password: string, code: string) {
+    return this.http.post('/user/add.do', {
+      'code': code,
+      'userphone': username,
+      'userpassword': password
+    });
+  }
+
+  getQRcode(phone: string) {
+    console.log(phone);
+    return this.http.post('/user/give.do', phone);
+  }
 
   login(user: string, pwd: string) {
     this.http.get('/cas/login?action=getlt&callback=?service=http%3A%2F%2F10.0.0.30%3A9102%2Flogin%2Fcas')
@@ -41,9 +63,9 @@ export class SignService {
         console.log(localStorage.getItem('execution'));
       });
 
-    http_options.headers.append('Cookie', 'JSESSIONID=' + localStorage.getItem('session'));
+    // http_options.headers.append('Cookie', 'JSESSIONID=' + localStorage.getItem('session'));
 
-    console.log(http_options.headers);
+    // console.log(http_options.headers);
 
     const gg = 'username=' + user +
       '&password=' + pwd +
@@ -56,7 +78,7 @@ export class SignService {
       console.log(data);
     });
 
-    this.http.get('personal/login.do', http_options)
+    this.http.get('personal/login.do')
       .subscribe(
         (data: User) => {
         localStorage.setItem('userId', data.id.toString());
@@ -67,7 +89,7 @@ export class SignService {
       },
         error1 => {
           console.log('真是日了够了, 居然报错了');
-          this.router.navigate(['/cas/login?service=http%3A%2F%2F10.0.0.30%3A9102%2Flogin%2Fcas']);
+          this.router.navigate(['/login']);
           return ;
         }
       );

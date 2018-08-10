@@ -70,8 +70,8 @@ export class CourseService {
    * @param {number} chapterId 视频所在章节的章节 ip
    * @returns {Observable<Object>}
    */
-  getVideo(chapterId: number) {
-    return this.http.get('vidio/findByCategoryId.do?id=' + chapterId);
+  getVideo(chapterId: number, userId: number) {
+    return this.http.get('vidio/findByCategoryId.do?cid=' + chapterId + '&uid=' + userId);
   }
 
 }
